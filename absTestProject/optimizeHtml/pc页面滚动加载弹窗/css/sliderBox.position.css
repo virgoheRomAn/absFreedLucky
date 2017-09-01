@@ -1,0 +1,409 @@
+.slider-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-bar {
+    *zoom: 1;
+}
+
+.slider-bar:after {
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: visible;
+    *zoom: 1;
+}
+
+.slide-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #FFFFFF;
+}
+
+.slider-banner .slider-bar .slide-placeholder img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -75px;
+}
+
+/**********************************************/
+/*****banner轮播*****/
+/**********************************************/
+.slider-banner {
+    position: relative;
+    height: 471px;
+    margin: auto;
+}
+
+.slider-bar {
+    position: relative;
+    z-index: 100;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-bar li {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-banner .slider-bar li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slider-bar li a:focus,
+.slider-bar li a:visited {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.slider-banner .slider-bar li img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 1960px;
+    height: 471px;
+    margin-left: -980px;
+}
+
+.slider-btn {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 102;
+    width: 1200px;
+    margin-left: -600px;
+    margin-top: -40px;
+}
+
+.slider-btn a {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 45px;
+    height: 80px;
+    margin-top: -40px;
+    background-color: #333;
+    -khtml-opacity: .5;
+    -moz-opacity: .5;
+    opacity: .5;
+    filter: "alpha(opacity=50)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+    zoom: 1;
+}
+
+.slider-btn a:hover {
+    -khtml-opacity: .8;
+    -moz-opacity: .8;
+    opacity: .8;
+    filter: "alpha(opacity=80)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+}
+
+.slider-btn a i {
+    display: block;
+    width: 16px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -18px 0 0 -8px;
+    background: url("../img/slideImg/slider-btn.png") no-repeat;
+}
+
+.slider-btn a.prev {
+    left: 0;
+}
+
+.slider-btn a.next {
+    right: 0;
+}
+
+.slider-btn a.prev i {
+    background-position: 0 0;
+}
+
+.slider-btn a.next i {
+    background-position: -32px 0;
+}
+
+.slider-paging {
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 102;
+    text-align: center;
+}
+
+.slider-paging.current span {
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    margin: 0 2px;
+    background: #ddd;
+    cursor: pointer;
+    font-size: 0;
+    text-align: left;
+}
+
+.slider-paging.current span i {
+    display: inline-block;
+    width: 1px;
+    transition: width 3s linear;
+    -webkit-transition: width 3s linear;
+    -moz-transition: width 3s linear;
+    -o-transition: width 3s linear;
+}
+
+.slider-paging.current span.active i {
+    background: #e2242b;
+    height: 4px;
+    width: 30px;
+}
+
+.slider-paging.active span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: #333;
+    -khtml-opacity: .8;
+    -moz-opacity: .8;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    zoom: 1;
+    cursor: pointer;
+    margin: 0 10px;
+    text-indent: -9999px;
+}
+
+.slider-paging.active span.active,
+.slider-paging.active span:hover {
+    background: #d71a21;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+
+.slider-banner .slider-btn {
+    width: 740px;
+    margin-left: -411px;
+}
+
+/**********************************************/
+/*****产品小图片轮播*****/
+/**********************************************/
+.slider-hotProduct {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/**********************************************/
+/*****无缝滚动轮播*****/
+/**********************************************/
+.slider-notice {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 115px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.slider-notice ul {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.slider-notice li {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 3px 10px;
+    font-size: 13px;
+}
+
+.slider-notice li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333333;
+}
+
+.slider-notice li a:hover {
+    text-decoration: underline;
+}
+
+.slider-notice li a.active {
+    color: #c40000;
+}
+
+.slider-marquee-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-marquee-img ul {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-marquee-img ul li {
+    float: left;
+    display: block;
+    width: 295px;
+    height: 418px;
+}
+
+/**********************************************/
+/*****楼层产品轮播*****/
+/**********************************************/
+/*单图*/
+.slider-floor {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*多图*/
+.slider-product {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-product .slider-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-product li {
+    position: relative;
+    float: left;
+    display: block;
+    width: 295px;
+    height: 418px;
+    margin-right: 10px;
+}
+
+.slider-product li:last-child {
+    margin-right: 0;
+}
+
+.slider-product li img,
+.slider-product li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-product li a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.slider-product .slider-information {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.slider-product .slider-information.normal {
+    height: 50px;
+    line-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.slider-product .slider-name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 35px 5px 10px;
+    position: relative;
+}
+
+.slider-product .slider-name i {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    display: block;
+    width: 25px;
+    height: 20px;
+    background: url("../img/slideImg/slider-icon.png") no-repeat 0 -26px;
+}
+
+.slider-information.normal .slider-name i {
+    background-position: 0 12px;
+    top: 8px;
+}
+
+.slider-product .slider-intro {
+    padding: 0 10px;
+    line-height: 20px;
+}
+
+.slider-product .slider-price {
+    font-size: 16px;
+    color: #f6ff0a;
+    padding: 0 10px 5px;
+}
+
+.slider-product .slider-price span {
+    font-size: 18px;
+}

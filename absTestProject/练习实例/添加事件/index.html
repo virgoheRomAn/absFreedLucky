@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>事件处理</title>
+</head>
+<body>
+<a href="javascript:;">123456</a>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+
+
+    $(function () {
+        $.event.special.cledad = {
+            setup: function () {
+                this.addEventListener("click", handler, false);
+            }
+        };
+
+
+        $("a").bind("cledad", function (e, a, b, c, d) {
+            console.log(e, a, b, c, d);
+        });
+
+
+        function handler(event) {
+            var orgEvent = event || window.event;
+            event = $.event.fix(orgEvent);
+            event.type = 'cledad';
+            var a = 1, b = 2, c = 3, d = 4;
+            var args = [event, a, b, c, d];
+            return ($.event.dispatch || $.event.handle).apply(this, args);
+        }
+    });
+
+</script>
+</body>
+</html>

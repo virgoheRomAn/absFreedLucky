@@ -1,0 +1,217 @@
+/*************************************/
+/*专题特殊弹出框*/
+/*************************************/
+.x-disk-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+}
+
+.x-disk-container {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10001;
+}
+
+.x-disk-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.x-disk-title, .x-disk-cont,
+.x-disk-intro, .x-disk-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.x-disk-btn a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.x-disk-cont {
+    height: 100%;
+}
+
+.x-disk-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+}
+
+.x-disk-close:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin: 0;
+    content: "";
+}
+
+/*************************************/
+/*双11专题 首页氛围*/
+/*************************************/
+.disk-container-1111 {
+    width: 286px;
+    height: 220px;
+    margin: -110px 0 0 -143px;
+    background: url("../img/ticketDisk/ticket-bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.disk-title-1111 {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff600;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 99;
+}
+
+.disk-close-1111 {
+    top: -36px;
+    right: 0;
+}
+
+.disk-close-1111:after {
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    background: url("../img/ticketDisk/ticket-close.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.disk-cont-1111 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 101;
+}
+
+.disk-cont-1111 label {
+    display: block;
+    width: 50px;
+    position: absolute;
+    bottom: 56px;
+    left: 104px;
+}
+
+.disk-cont-1111 span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fbf7f8;
+    font-size: 10px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 23px;
+    left: 0;
+}
+
+.disk-cont-1111 a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-indent: -9999px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+}
+
+/*************************************/
+/*双12专题 首页氛围*/
+/*************************************/
+.disk-container-1212 {
+    width: 744px;
+    height: 1152px;
+    margin-top: -576px;
+    margin-left: -372px;
+    background: url("../img/ticketDisk/tackit-bg-1212.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.disk-close-1212 {
+    width: 65px;
+    height: 63px;
+    top: 335px;
+    right: 130px;
+}
+
+.disk-close-1212 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 63px;
+    height: 65px;
+    margin: -33px 0 0 -31px;
+    background: url("../img/ticketDisk/close.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.disk-cont-1212 {
+    width: 438px;
+    height: 470px;
+    position: absolute;
+    top: 355px;
+    left: 50%;
+    margin-left: -219px;
+}
+
+.disk-title-1212 {
+    display: block;
+    width: 335px;
+    margin: 35px auto 15px;
+}
+
+.disk-intro-1212 {
+    width: 100%;
+}
+
+.disk-intro-1212 p {
+    display: block;
+    padding: 0;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+.disk-btn-1212 {
+    margin-top: 20px;
+}
+
+.disk-btn-1212 a {
+    width: 290px;
+    height: 51px;
+    margin: auto;
+    line-height: 42px;
+    font-size: 20px;
+    background: url("../img/ticketDisk/ticket-btn-bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+

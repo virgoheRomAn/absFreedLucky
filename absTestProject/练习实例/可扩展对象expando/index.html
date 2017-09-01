@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>可扩展对象</title>
+</head>
+<body>
+<div id="div"></div>
+<script>
+    var div = document.getElementById("div");
+    var ary = ["a", 1, "12", null];
+
+    ary.expando = "xjq";
+    ary["xjq"] = "徐继强";
+    ary["abs"] = 100;
+    ary[101] = 101;
+        console.log(ary);
+    //    console.log(ary.xjq);
+        //console.log(ary.length);
+    Array.prototype.getExpandoValues = function () {
+        var values = [];
+        var obj = new this.constructor();
+        for (var i in this) {
+            if (obj[i] !== this[i]) {
+                values.push({"name": i, "value": this[i]});
+            }
+        }
+        return values;
+    };
+    var exp_names = ary.getExpandoValues();
+    console.log(exp_names);
+
+    //只需要Expando属性值，不需要prototype属性值
+    for (var i = 0; i < exp_names.length; i++) {
+        div.innerHTML += ("name: " + exp_names[i].name + ", value: " + exp_names[i].value + "<br>");
+    }
+
+    for (var item in exp_names) {
+        if (exp_names.hasOwnProperty(item)) {
+            div.innerHTML += ("key:  " + exp_names[item].name + ",  map[key]:  " + exp_names[item].value + "<br>");
+        }
+    }
+    //将包含Expando属性值以及prototype属性值
+    for (var i in exp_names) {
+        div.innerHTML += (i + "<br>");
+    }
+
+    /* for (var i in ary) {
+     if (ary.hasOwnProperty(i)) {
+     console.log(ary[i]);
+     }
+     }*/
+
+    /**
+     * 9*9乘法表
+     */
+    var n = 1, m;
+    for (n; n < 10; n++) {
+        for (m = 1; m <= n; m++) {
+            div.innerHTML += (n + "*" + m + "=" + n * m) + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            if (m == n) {
+                div.innerHTML += "<br>";
+            }
+        }
+    }
+
+    /**
+     * 二维数组
+     */
+    div.innerHTML += "<br><br><br><br>";
+    var ary1 = [];
+    for (var p = 1; p <= 8; p++) {
+        ary[p] = [];
+        var con_div = document.createElement("div");
+        con_div.style.width = "100%";
+        con_div.style.height = "32px";
+        for (var k = 1; k <= 8; k++) {
+            ary[p][k] = p * k;
+            var con = document.createElement("p");
+            con.style.float = "left";
+            con.style.width = "40px";
+            con.style.height = "32px";
+            con.style.lineHeight = "32px";
+            con.style.margin = 0;
+            con.style.textAlign = "center";
+            con.innerHTML += ary[p][k];
+            con_div.appendChild(con);
+            div.appendChild(con_div);
+        }
+    }
+</script>
+</body>
+</html>

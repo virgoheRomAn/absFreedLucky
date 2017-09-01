@@ -1,0 +1,578 @@
+@charset "UTF-8";
+html, body {
+    font-family: "微软雅黑", arial, verdana, sans-serif;
+}
+
+.skin-gray {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #efefef;
+}
+
+.skin-gray .x-wrap-1200 {
+    background: #ffffff;
+}
+
+.title {
+    padding-top: 40px;
+    font-size: 30px;
+    color: #333333;
+}
+
+.content {
+    display: block;
+    width: 100%;
+}
+
+.content.pad-big {
+    padding-bottom: 100px;
+}
+
+.group {
+    border-bottom: 1px dashed #999999;
+    padding: 15px 0;
+}
+
+.group.border {
+    border-bottom: 1px solid #999999;
+}
+
+.group.no-border {
+    border-bottom: 0 none;
+}
+
+.group.no-top {
+    margin-top: 0;
+}
+
+.group.no-bto {
+    margin-bottom: 0;
+}
+
+.group.no-mar {
+    margin: 0;
+}
+
+.group-list {
+    display: block;
+}
+
+.group-list .error,
+.group-list .waring,
+.group-list .success {
+    padding-left: 130px;
+    margin-top: 5px;
+}
+
+.group-list .error, .error {
+    color: red;
+}
+
+.group-list .waring, .waring {
+    color: orange;
+}
+
+.group-list .success, .success {
+    color: green;
+}
+
+.group-list > li {
+    margin: 20px 0;
+}
+
+.group-list > li > span,
+.son-title {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    font-size: 14px;
+    float: left;
+}
+
+.son-title.big {
+    width: 140px;
+}
+
+.group-list > li > span.block {
+    display: block;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.group-list > li > span.block.big {
+    width: 300px;
+    padding-left: 30px;
+    text-align: left;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.group-list > li > span i,
+.son-title i {
+    position: relative;
+    top: 5px;
+    font-style: normal;
+    color: #f40834;
+    font-size: 18px;
+    display: inline-block;
+    width: 15px;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.group-list > li > label,
+.son-cont {
+    display: inline-block;
+    width: 360px;
+    margin-left: 10px;
+}
+
+.group-list > li > label.small {
+    width: 212px;
+}
+
+.group-list > li a.get-code {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 128px;
+    text-align: center;
+    font-size: 14px;
+    background: #e9e7e7;
+    color: #333333;
+    margin-left: 40px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.group-list > li > label input,
+.son-cont input,
+.son-cont textarea {
+    display: block;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.group-list > li > em {
+    display: block;
+    padding-left: 130px;
+    color: #999999;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.group-list > li > em.pad-big {
+    padding-left: 60px;
+    margin-bottom: 20px;
+}
+
+.group-list > li > em a {
+    color: #1f9eff;
+}
+
+.select-area, .select-module {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.select-bar {
+    position: relative;
+    display: block;
+    padding: 0 41px 0 10px;
+    width: 112px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+}
+
+.select-bar span {
+    display: block;
+    width: 100%;
+    color: #878787;
+    font-size: 14px;
+}
+
+.select-bar span.active {
+    color: #333;
+}
+
+.select-bar a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 100%;
+    border-left: 1px solid #BBBBBB;
+}
+
+.select-bar i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 8px;
+    margin: -4px 0 0 -8px;
+    background: url("../img/select.png") no-repeat center;
+}
+
+.select-bar ul {
+    display: none;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+    background: #ffffff;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.select-bar li {
+    padding: 0 10px;
+}
+
+.select-bar li span {
+    height: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+.select-bar li span:hover {
+    text-decoration: underline;
+    color: #f4ac94;
+}
+
+.select-bar li span.active {
+    color: #f40834;
+}
+
+.select-module {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.select-module label {
+    margin-right: 50px;
+}
+
+.select-module label input {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.select-module .query {
+    display: inline-block;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    background: url("../img/query.png") no-repeat center;
+    position: relative;
+    top: 6px;
+}
+
+.son {
+    display: block;
+    width: 100%;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.son:last-child,
+.son.last {
+    margin-bottom: 0;
+}
+
+.son form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.son-cont {
+    width: 202px;
+}
+
+.son-cont input {
+    width: 180px;
+}
+
+.son-cont textarea {
+    position: relative;
+    top: 10px;
+    resize: none;
+    width: 428px;
+    height: 100px;
+}
+
+.son-check-box {
+    font-size: 14px;
+}
+
+.son-check-box input {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.son-upload {
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+
+.son-upload img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.son-upload a {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.son-upload input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.son-upload span {
+    display: block;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    margin: -20px 0 0 -20px;
+    background: url("../img/upload.png") no-repeat center;
+}
+
+.son-upload em {
+    font-style: normal;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    display: block;
+    margin-top: 120px;
+    /*position: absolute;*/
+    /*margin-left: 20px;*/
+}
+
+.btn-bar {
+    padding-left: 130px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #1f9eff;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.btn.color {
+    background: #e57904;
+}
+
+.disk-bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.disk-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 540px;
+    margin: -180px 0 0 -270px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.disk-title {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    color: #545454;
+    font-size: 22px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.disk-container {
+    position: relative;
+}
+
+.disk-cont {
+    display: block;
+    padding: 20px;
+}
+
+.code-bar {
+    position: relative;
+    padding: 26px;
+}
+
+.code-bar label {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.code-bar label span {
+    display: inline-block;
+    color: #666666;
+    font-size: 18px;
+}
+
+.code-bar label input {
+    display: inline-block;
+    width: 112px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-left: 10px;
+    padding: 0 10px;
+}
+
+.code-bar label a {
+    display: inline-block;
+    width: 105px;
+    height: 36px;
+    margin-left: 10px;
+}
+
+.code-bar label a img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.code-bar em.error {
+    color: #fd263f;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 113px;
+}
+
+.code-bar label em {
+    display: inline-block;
+    vertical-align: middle;
+    color: #666666;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.disk-btn {
+    position: relative;
+    padding: 35px;
+    border-top: 1px solid #E5E5E5;
+    text-align: center;
+}
+
+.disk-btn a {
+    display: inline-block;
+    width: 100px;
+    height: 48px;
+    line-height: 48px;
+    background: #f6f6f6;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: center;
+    font-size: 22px;
+    color: #999999;
+    margin: 0 15px;
+}
+
+.disk-btn a.active {
+    background: #e70012;
+    border: 1px solid #e70012;
+    color: #ffffff;
+}

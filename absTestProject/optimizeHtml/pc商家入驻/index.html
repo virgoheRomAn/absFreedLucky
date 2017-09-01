@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家入驻</title>
+    <link rel="stylesheet" href="css/reset.pc.min.css">
+    <link rel="stylesheet" href="css/public.pc.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body class="skin-gray">
+<div class="x-wrap-1200">
+    <div class="x-wrap-1000">
+        <div class="title"><span>企业信息</span></div>
+        <div class="content">
+            <div class="group">
+                <ul class="group-list">
+                    <li>
+                        <span><i>*</i>企业名称：</span>
+                        <label><input type="text" placeholder="请输入企业名称"></label>
+                        <div class="error">*税号不能为空</div>
+                    </li>
+                    <li>
+                        <span><i>*</i>联系人：</span>
+                        <label><input type="text" placeholder="请输入联系人"></label>
+                    </li>
+                    <li>
+                        <span><i>*</i>联系电话：</span>
+                        <label><input type="text" placeholder="请输入联系电话"></label>
+                    </li>
+                    <li>
+                        <span><i>*</i>税号：</span>
+                        <label><input type="text" placeholder="请输入税号"></label>
+                        <em>若您销售的产品是食盐，则提供《食盐定点生产许可证》；若您是家禽类养殖户或生鲜蛋类销售，则须提供《动物防疫条件合格证》；<br>若您是水产养殖户，则须提供《水域滩涂养殖许可》或《养殖证明》；若为果蔬种植户，则无须提供。</em>
+                    </li>
+                    <li>
+                        <span><i>*</i>营业执照地区：</span>
+                        <div class="select-area clearfix">
+                            <div class="select-bar float-left mar-r20">
+                                <span>省</span>
+                                <a href="javascript:;"><i></i></a>
+                                <ul class="list" id="province">
+                                    <li><span>北京</span></li>
+                                    <li><span>上海</span></li>
+                                    <li><span class="active">重庆</span></li>
+                                    <li><span>北京</span></li>
+                                    <li><span>上海</span></li>
+                                    <li><span>重庆</span></li>
+                                    <li><span>北京</span></li>
+                                    <li><span>上海</span></li>
+                                    <li><span>重庆</span></li>
+                                    <li><span>北京</span></li>
+                                    <li><span>上海</span></li>
+                                    <li><span>重庆</span></li>
+                                    <li><span>北京</span></li>
+                                    <li><span>上海</span></li>
+                                    <li><span>重庆</span></li>
+                                </ul>
+                            </div>
+                            <div class="select-bar float-left mar-r20">
+                                <span>市</span>
+                                <a href="javascript:;"><i></i></a>
+                                <ul class="list" id="city">
+                                    <li><span class="active">重庆</span></li>
+                                </ul>
+                            </div>
+                            <div class="select-bar float-left mar-r20">
+                                <span>区</span>
+                                <a href="javascript:;"><i></i></a>
+                                <ul class="list" id="county">
+                                    <li><span>江北</span></li>
+                                    <li><span>渝北</span></li>
+                                    <li><span class="active">沙坪坝</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                    <li><span>渝中</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i>*</i>合作模式：</span>
+                        <div class="select-module clearfix">
+                            <label><input type="radio" name="module" checked>结婚模式</label>
+                            <label><input type="radio" name="module">恋爱模式</label>
+                            <a href="#" class="query"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <ul class="group-list">
+                    <li>
+                        <span><i>*</i>企业执照类型：</span>
+                        <div class="select-module clearfix">
+                            <label><input type="radio" name="module1" checked>营业执照</label>
+                            <label><input type="radio" name="module1">营业执照（三证合一）</label>
+                            <a href="#" class="query"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="block"><i>*</i>企业执照类型</span>
+                        <div class="son">
+                            <span class="son-title">有效期：</span>
+                            <label class="son-cont"><input type="text" placeholder="年 / 月 / 日"></label>
+                            <span class="mar-l15 mar-r15">~</span>
+                            <label class="son-cont mar-none-l"><input type="text" placeholder="年 / 月 / 日"></label>
+                            <label class="son-check-box mar-l15"><input type="checkbox">长期</label>
+                        </div>
+                        <div class="son">
+                            <span class="son-title">证件图片上传：</span>
+                            <form>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                            </form>
+                            <form>
+                                <label class="son-upload">
+                                    <input type="file">
+                                    <span><i></i></span>
+                                </label>
+                            </form>
+                            <form>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <ul class="group-list">
+                    <li>
+                        <span class="block"><i>*</i>组织机构代码</span>
+                        <div class="son">
+                            <span class="son-title">有效期：</span>
+                            <label class="son-cont"><input type="text" placeholder="年 / 月 / 日"></label>
+                            <span class="mar-l15 mar-r15">~</span>
+                            <label class="son-cont mar-none-l"><input type="text" placeholder="年 / 月 / 日"></label>
+                            <label class="son-check-box mar-l15"><input type="checkbox">长期</label>
+                        </div>
+                        <div class="son">
+                            <span class="son-title">证件图片上传：</span>
+                            <label class="son-upload">
+                                <input type="file">
+                                <span><i></i></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <ul class="group-list">
+                    <li>
+                        <span class="block"><i>*</i>税务登记证</span>
+                        <div class="son">
+                            <span class="son-title">证件图片上传：</span>
+                            <label class="son-upload">
+                                <input type="file">
+                                <span><i></i></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <ul class="group-list">
+                    <li>
+                        <span class="block"><i>*</i>法人身份证件</span>
+                        <div class="son">
+                            <span class="son-title big">身份证正反面上传：</span>
+                            <form>
+                                <label class="son-upload">
+                                    <input type="file">
+                                    <span><i></i></span>
+                                    <em>身份证正面</em>
+                                </label>
+                            </form>
+                            <form>
+                                <label class="son-upload">
+                                    <input type="file">
+                                    <span><i></i></span>
+                                    <em>身份证反面</em>
+                                </label>
+                            </form>
+                            <form>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <ul class="group-list">
+                    <li>
+                        <span class="block"><i>*</i>开户行许可证</span>
+                        <div class="son">
+                            <span class="son-title">证件图片上传：</span>
+                            <form>
+                                <label class="son-upload">
+                                    <input type="file">
+                                    <span><i></i></span>
+                                </label>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                                <label class="son-upload">
+                                    <img src="img/upload-img.jpg">
+                                    <a href="javascript:;"><img src="img/close.png"></a>
+                                </label>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group border">
+                <ul class="group-list">
+                    <li>
+                        <span><i>*</i>企业经营模式：</span>
+                        <div class="select-module clearfix">
+                            <label><input type="checkbox" name="module2">自产自销经营模式</label>
+                            <label><input type="checkbox" name="module2">委托生产经营模式</label>
+                            <label><input type="checkbox" name="module2">贸易模式</label>
+                        </div>
+                        <em>若您销售的产品是食盐，则提供《食盐定点生产许可证》；若您是家禽类养殖户或生鲜蛋类销售，则须提供《动物防疫条件合格证》；<br>若您是水产养殖户，则须提供《水域滩涂养殖许可》或《养殖证明》；若为果蔬种植户，则无须提供。<a
+                                href="#">详情了解＞</a></em>
+                        <div class="btn-bar"><a class="btn" href="javascript:;">确定模式</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group border">
+                <ul class="group-list">
+                    <li>
+                        <span class="block big">需上传资质：</span>
+                        <span class="block big">商品出入境检验检疫合格证</span>
+                        <em class="pad-big"> 若被委托单位是水产养殖户，则提供《水域滩涂养殖许可证》或《养殖证明》；若为家禽类养殖户或生鲜蛋类生产，则提供《动物防疫条件合</em>
+                        <div class="son">
+                            <span class="son-title">收货单位：</span>
+                            <label class="son-cont"><input type="text"></label>
+                        </div>
+                        <div class="son">
+                            <span class="son-title">入境日期：</span>
+                            <label class="son-cont"><input type="text" placeholder="年 / 月 / 日"></label>
+                            <span class="mar-l15 mar-r15">~</span>
+                            <label class="son-cont mar-none-l"><input type="text" placeholder="年 / 月 / 日"></label>
+                            <label class="son-check-box mar-l15"><input type="checkbox">长期</label>
+                        </div>
+
+                        <div class="son">
+                            <span class="son-title">生产范围：</span>
+                            <label class="son-cont">
+                                <textarea cols="5" rows="5"></textarea>
+                            </label>
+                        </div>
+                        <div class="son">
+                            <span class="son-title">证件图片上传：</span>
+                            <label class="son-upload">
+                                <input type="file">
+                                <span><i></i></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="title"><span>账户信息</span></div>
+        <div class="content pad-big">
+            <div class="group no-border">
+                <ul class="group-list">
+                    <li>
+                        <span><i>*</i>用户名：</span>
+                        <label><input type="text" placeholder="请输入用户名"></label>
+                    </li>
+                    <li>
+                        <span><i>*</i>手机/邮箱：</span>
+                        <label><input type="text" placeholder="请输入手机/邮箱"></label>
+                    </li>
+                    <li>
+                        <span><i>*</i>验证码：</span>
+                        <label class="small"><input type="text" placeholder="请输入验证码"></label>
+                        <a class="get-code" href="javascript:;">获取验证码</a>
+                    </li>
+                    <li>
+                        <span><i>*</i>设置密码：</span>
+                        <label><input type="password" placeholder="请输入6-20位字符，可使用数字、字母或者符号进行组合"></label>
+                    </li>
+                    <li>
+                        <span><i>*</i>确认密码：</span>
+                        <label><input type="password" placeholder="请再次输入密码"></label>
+                    </li>
+                    <li>
+                        <span><i>*</i>集采码：</span>
+                        <label><input type="password" placeholder="请输入集采码"></label>
+                        <em>若您销售的产品是食盐，则提供《食盐定点生产许可证》；若您是家禽类养殖户或生鲜蛋类销售，则须提供《动物防疫条件合格证》；<br>若您是水产养殖户，则须提供《水域滩涂养殖许可》或《养殖证明》；若为果蔬种植户，则无须提供。</em>
+                        <div class="btn-bar"><a class="btn color" href="javascript:;">提交审核</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="disk-bar" style="display: none;">
+    <div class="disk-box">
+        <div class="disk-title"><span>图形验证码</span></div>
+        <div class="disk-container">
+            <div class="disk-cont">
+                <div class="code-bar">
+                    <label>
+                        <span>验证码：</span>
+                        <input type="text" placeholder="请输入验证码">
+                        <a href="javascript:;"><img src="img/upload-img.jpg"></a>
+                        <em>点击图片更换</em>
+                    </label>
+                    <em class="error">验证码有误，请重新输入</em>
+                </div>
+            </div>
+            <div class="disk-btn">
+                <a class="active" href="javascript:;">确定</a>
+                <a class="" href="javascript:;">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/box.js"></script>
+<script>
+    $(function () {
+
+        $(".select-bar").click(function (e) {
+            if (!$(e.target).parents("ul").hasClass("list") && !$(e.target).hasClass("list")) {
+                $(".select-bar").find("ul").hide();
+                var $ul = $(this).find("ul");
+                $ul.toggle();
+            }
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).parents(".select-bar").hasClass("select-bar")) {
+                $(".select-bar").find("ul").hide();
+            }
+        });
+
+        $(document).on("click", ".select-bar ul li", function (e) {
+            $(this).closest("ul").hide();
+            $(this).siblings().find("span").removeClass("active");
+            $(this).find("span").addClass("active");
+            $(this).parents(".select-bar").find("span").eq(0).addClass("active").text($(this).find("span").text());
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象-构造函数</title>
+</head>
+<body>
+<div id="div"></div>
+<script>
+    /**
+     * 实例：一个人的构造
+     * @param name  姓名
+     * @param sex   性别
+     * @param age   年龄
+     * @param stature   身高
+     * @param major     专业
+     * @param child     子女
+     */
+    function People(name, sex, age, stature, major, child) {
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+        this.stature = stature;
+        this.major = major;
+        this.child = child;
+
+        /**
+         * 构造函数的弊端示例：
+         */
+        /*this.live = "重庆";
+         this.interest = function () {
+         console.log("爱好：家庭");
+         };*/
+    }
+
+    /**
+     * 解决弊端 ---prototype---
+     */
+    People.prototype.live = "重庆";
+    People.prototype.interest = function () {
+        console.log("爱好：家庭");
+    };
+
+    var xjq = new People("徐继强", "男", 27, "175cm", "大专", "徐晨轩");
+    var dy = new People("董娅", "女", 27, "160cm", "大专", "徐晨轩");
+
+    //xjq.interest();
+    /**
+     * 构造函数的弊端：
+     * 那就是对于每一个实例对象，
+     * live属性和interest()方法都是一模一样的内容，（指：构造函数中包含不变的属性和方法）
+     * 每一次生成一个实例，都必须为重复的内容，
+     * 多占用一些内存。这样既不环保，也缺乏效率。
+     */
+    console.log(xjq.interest == dy.interest);  //false
+
+    /**
+     * 解决构造函数的弊端：---prototype---
+     * Javascript规定，每一个构造函数都有一个prototype属性，
+     * 指向另一个对象。这个对象的所有属性和方法，
+     * 都会被构造函数的实例继承。
+     * 让live属性和interest()方法在内存中只生成一次，然后所有实例都指向那个内存地址
+     */
+    console.log(xjq.interest == dy.interest);  //true
+
+    //prototype验证办法：
+    //"isPrototypeOf" ----判断某个prototype对象和某个实例之间的关系。
+    console.log("isPrototypeOf：" + People.prototype.isPrototypeOf(xjq));   //true
+    //"hasOwnProperty " ----用来判断某一个属性到底是本地属性，还是继承自prototype对象的属性。
+    console.log("hasOwnProperty-name：" + xjq.hasOwnProperty("name"));    //true--本地属性
+    console.log("hasOwnProperty-live：" + xjq.hasOwnProperty("live"));    //false--继承得来属性
+    //"in" ----可以用来判断，某个实例是否含有某个属性，不管是不是本地属性
+    console.log("name" in xjq);    //true--本地属性
+    console.log("live" in xjq);    //true--继承得来属性
+    //"in" ----还可以用来遍历某个对象的所有属性。
+    for (var pop in xjq) {
+        //for in--循环中每次执行都会查询该对象的原型的属性。
+        //对于使用prototype扩展的对象，for in会出现循环拓展的属性
+        //利用"hasOwnProperty"检测排除了"live属相"和"interest()方法"
+        if (xjq.hasOwnProperty(pop)) {
+            console.log("枚举出对象的所有属性：" + pop + "-" + xjq[pop]);
+            console.log("xjq[" + pop + "]=" + xjq[pop]);
+        }
+    }
+
+    //constructor 指向它们的构造函数。
+    console.log(xjq.constructor == People);
+    //instanceof 用于判断一个变量是否某个对象的实例
+    console.log(xjq instanceof People);
+
+    /**
+     * 构造函数的继承
+     */
+
+    //一、使用call或者apply方法，将父元素的构造函数绑定在子对象上
+    //人物-子对象（构造函数）
+    function People1(name) {
+        State1.apply(this, arguments);
+        this.name = name;
+    }
+
+    //国家-父对象（构造函数）
+    function State1() {
+        this.state = "中国";
+    }
+
+    var xjq1 = new People1("徐继强");
+    console.log("apply,call实现继承：" + xjq1.name + " 来自 " + xjq1.state);
+
+    //二、使用prototype属性。
+    //人物-子对象（构造函数）
+    function People2(name) {
+        this.name = name;
+    }
+
+    //国家-父对象（构造函数）
+    function State2() {
+        this.state = "美国";
+    }
+
+    //People2原型指向People2
+    console.log(People2.prototype.constructor); //People2
+    //People2原型指向State2--修改了People2的原型的原本指向
+    People2.prototype = new State2();
+    console.log(People2.prototype.constructor); //State2
+    //People2原型指向People2--重新修改了People2的原型指向
+    //维护正常的原型链
+    People2.prototype.constructor = People2;
+    console.log(People2.prototype.constructor); //People2
+    var xjq2 = new People2("徐继强");
+    console.log("prototype实现继承：" + xjq2.name + " 来自 " + xjq2.state);
+
+    //三、利用空对象作为中介
+    /**
+     * 继承函数
+     * @param c 子对象
+     * @param p 父对象
+     */
+    function extend(c, p) {
+        var f = function () {
+        };
+        f.prototype = p.prototype;
+        c.prototype = new f();
+        c.prototype.constructor = c;
+        c.uber = p.prototype;
+    }
+
+    //人物-子对象（构造函数）
+    function People3(name) {
+        this.name = name;
+    }
+
+    //国家-父对象-prototype封装
+    function State3() {
+    }
+    State3.prototype.state = "加拿大";
+
+    extend(People3, State3);
+    var xjq3 = new People3("徐继强");
+    console.log(xjq3);
+    console.log("空函数-prototype实现继承：" + xjq3.name + " 来自 " + xjq3.state);
+
+    /**
+     * 非构造函数的继承
+     */
+    var peopleState = {
+        state: "中国",
+        sex: ["男", "女"]
+    };
+
+    //一、使用object()函数
+    function object(p) {
+        var f = function () {
+        };
+        f.prototype = p;
+        return new f();
+    }
+
+    var xjq4 = object(peopleState);
+    xjq4.name = "徐继强";
+    xjq4.age = 27;
+    xjq4.sex = "男";
+    console.log("非构造函数继承1：" + xjq4.name + " 来自 " + xjq4.state);
+
+    //二、浅拷贝
+    function copy1(p) {
+        var c = {};
+        for (var i in p) {
+            c[i] = p[i];
+        }
+        c.uber = p;
+        return c;
+    }
+    var xjq5 = copy1(peopleState);
+    xjq5.name = "徐继强";
+    xjq5.sex.push("中性");
+    console.log(xjq5.sex, peopleState.sex);   //如果父辈对象的属性是数组或者另一个对象，修改子对象中对应的数组或者另一个对象，父辈会随之改变
+    console.log("非构造函数继承2：" + xjq5.name + " 性别：" + xjq5.sex[0] + " 来自：" + xjq5.state);
+
+
+    //三、深拷贝 递归浅拷贝
+    function copy2(p, c) {
+        var c = c || {};
+        for (var i in p) {
+            if (typeof p[i] == "object") {
+                c[i] = (p[i].constructor === Array) ? [] : {};
+                copy2(p[i], c[i]);
+            } else {
+                c[i] = p[i];
+            }
+        }
+        return c;
+    }
+
+    var xjq6 = copy2(peopleState);
+    xjq6.name = "徐继强";
+    xjq6.sex.push("非中性");
+    console.log(xjq6.sex, peopleState.sex); //子对象修改，父辈对象不会修改
+    console.log("非构造函数继承2：" + xjq5.name + " 性别：" + xjq6.sex[0] + " 来自：" + xjq6.state);
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>测试缩放</title>
+    <link rel="stylesheet" href="css/fb-common.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body class="isHide">
+<div class="fb-wrap height black">
+    <div class="fb-overflow hide pad-t40">
+        <div class="pos-abs-tl title">
+            <span class="disk-block t-center color-gray-2b2 t-size16">测试图片缩放</span>
+        </div>
+        <span id="intro" class="pos-abs-tl disk-block color-white">测试图片缩放</span>
+        <div class="fb-height cont">
+            <label class="scale-box"><img src="img/shop-banner1.jpg"></label>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/touch-0.2.14.min.js"></script>
+<script src="js/fb-common.js"></script>
+<script src="js/pageScript.js"></script>
+<script>
+    $(function () {
+        var $window = $(window);
+        var $box = $(".scale-box");
+        var $img = $box.find("img");
+        FB.loadImages($img, false, $img.attr("src"), function (w, h) {
+            FB.setImageLayout($img[0], $window.width(), $window.height() - 40, w, h);
+        });
+
+        var save = {}, options = {
+            allowBeyondScreen: false,
+            openEvent: true,
+            openDrag: true,
+            openPinch: true,
+            openRotate: false,
+            minScale: 0.3,
+            maxScale: 3
+        };
+        save._width = $img.width();
+        save._height = $img.height();
+
+        //元素单独样式定义
+        save.zIndex = options.zIndex || 50; //元素 z-index 层叠位置
+        save.minScale = options.minScale || gmp.minScale; //最小缩放倍数 (如果不允许超屏会重新计算缩小值)
+        save.maxScale = options.maxScale || gmp.maxScale; //最大缩放倍数
+
+        save.allowBeyondScreen = options.allowBeyondScreen; //是否允许超出屏幕
+        save.openEvent = options.openEvent === undefined ? gmp.openEvent : options.openEvent; //是否开启事件支持
+        save.openDrag = options.openDrag === undefined ? gmp.openDrag : options.openDrag; //在开启事件支持的情况下是否开启拖拽的支持
+        save.openPinch = options.openPinch === undefined ? gmp.openPinch : options.openPinch; //在开启事件支持的情况下是否开启缩放的支持
+        save.openRotate = options.openRotate === undefined ? gmp.openRotate : options.openRotate; //在开启事件支持的情况下是否开启旋转的支持， 开启旋转支持的话是会强制超出屏幕
+        if (save.openRotate) save.allowBeyondScreen = true;
+
+        save.initScaleType = options.initScaleType || 0; // 初始化缩放类型 0表示 自动缩放到和窗口一样大小， 1表示如果比窗口大就使用0如果比窗口小就原始大小
+
+        //事件
+        save.loadComplete = options.loadComplete || null; //图片载入完成后的回调
+
+        save._currX = 0; //当前图片的X轴坐标
+        save._currY = 0; //当前图片的Y轴坐标
+        save._scale = 1; //当前图片的缩放值
+        save._rotate = 0; //当前图片的旋转度数
+        save._originX = "center"; //当前图片旋转中心的X轴坐标
+        save._originY = "center"; //当前图片旋转中心的Y轴坐标
+        save._angle = 0;
+        //拖拽
+        save.__dragX__ = 0;
+        save.__dragY__ = 0;
+        save.__isDrag__ = false;
+        //缩放
+        save.__cpx__ = 0;
+        save.__cpy__ = 0;
+        save.__offset__ = 0;
+        save.__isPinch__ = false;
+        save.__scale_temp__ = 1;
+
+        //禁用浏览器默认事件
+        touch.on($img, 'touchmove', function (ev) {
+            ev.preventDefault();
+        });
+
+        //拖拽
+        touch.on($img, 'dragstart', function (ev) {
+            save.__isDrag__ = true;
+            save.__dragX__ = save._currX;
+            save.__dragY__ = save._currY;
+        });
+
+        touch.on($img, 'drag', function (ev) {
+            if (!save.__isDrag__) return false;
+            save.move(save.__dragX__ + ev.x, save.__dragY__ + ev.y);
+        });
+
+        touch.on($img, 'dragend', function (ev) {
+            save.__dragX__ += ev.x;
+            save.__dragY__ += ev.y;
+            save.__isDrag__ = false;
+        });
+
+        save.move = function (x, y) {
+            var self = this;
+            self._currX = x;
+            self._currY = y;
+
+            //self._originX = (self._currX * -1 + self._width / 2) + "px";
+            //self._originY = (self._currY * -1 + self._height / 2) + "px";
+
+            if (!save.allowBeyondScreen) self.reviseImagePos();
+            else $img.css({left: self._currX, top: self._currY});
+        };
+
+
+        //缩小放大
+        touch.on($img, 'pinchstart', function (ev) {
+            save.__isPinch__ = true;
+            var touches = ev.originEvent.touches;
+
+            var t1x = touches[0].pageX;
+            var t1y = touches[0].pageY;
+
+            var t2x = touches[1].pageX;
+            var t2y = touches[1].pageY;
+
+            var minX = Math.min(t1x, t2x);
+            var minY = Math.min(t1y, t2y);
+            var xc = Math.max(t1x, t2x) - minX;
+            var yc = Math.max(t1y, t2y) - minY;
+
+            save.__cpx__ = minX + xc / 2;
+            save.__cpy__ = minY + yc / 2;
+
+            save.__offset__ = $img.offset();
+        });
+
+        touch.on($img, 'pinch', function (ev) {
+            if (!save || !save.openEvent || !save.openPinch) return false;
+            if (save.__isPinch__) {
+                var x = save.__cpx__ - save.__offset__.left;
+                var y = save.__cpy__ - save.__offset__.top;
+                save.scaleTo(save.__scale_temp__ + (ev.scale - 1), x, y, false);
+            }
+        });
+
+        touch.on($img, 'pinchend', function (ev) {
+            if (!save || !save.openEvent || !save.openPinch) return false;
+            save.__scale_temp__ = save._scale;
+            if (!save.allowBeyondScreen) save.reviseImagePos();
+            save.__isPinch__ = false;
+        });
+
+
+        save.scaleTo = function (scale, x, y, type) {
+            var self = this;
+            var ratio = scale;
+            ratio = ratio < self.minScale ? self.minScale : (ratio > self.maxScale ? self.maxScale : ratio);
+            self._currX = self._currX - (x - self._currX) * (ratio - self._scale) / (self._scale);
+            self._currY = self._currY - (y - self._currY) * (ratio - self._scale) / (self._scale);
+
+            self._scale = ratio;
+
+            self._curr_width = self._image_width * ratio;
+            self._curr_height = self._image_height * ratio;
+
+            $img.css({
+                left: self._currX,
+                top: self._currY,
+                width: self._curr_width,
+                height: self._curr_height
+            });
+
+            if (type && !self.allowBeyondScreen)  self.reviseImagePos();
+        };
+
+        save.reviseImagePos = function () {
+            var self = this;
+            if (save.allowBeyondScreen) return;
+
+            //真实的图片宽高
+            var minX = Math.round(self._width - self._curr_width);
+            var minY = Math.round(self._height - self._curr_height);
+
+
+            var x = self._currX;
+            var y = self._currY;
+
+            if (minX > 0)  self._currX = x > minX ? minX : x < 0 ? 0 : x;
+            else  self._currX = x > 0 ? 0 : x < minX ? minX : x;
+
+            if (minY > 0)  self._currY = y > minY ? minY : y < 0 ? 0 : y;
+            else  self._currY = y > 0 ? 0 : y < minY ? minY : y;
+
+
+            $img.css({left: self._currX, top: self._currY});
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,2 +1,0 @@
-# absFreedLucky
-self-study

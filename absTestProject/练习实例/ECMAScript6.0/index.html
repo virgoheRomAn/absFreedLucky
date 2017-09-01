@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ECMAScript6.0</title>
+</head>
+<body>
+<a href="javascript:;">按钮1</a>
+<a href="javascript:;">按钮2</a>
+<a href="javascript:;">按钮3</a>
+
+<script>
+    /**
+     * 声明变量
+     */
+    {
+        /**
+         *变量let
+         * 变量 let 只有声明了才可以使用 相当于“use strict;（严格模式）”
+         * let声明的变量l，不可重复声明。
+         */
+        var a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = function () {
+                console.log(i);
+            };
+        }
+        a[6](); //6
+
+        //var 内部声明的i 都会覆盖外部的i
+        for (var i = 0; i < 3; i++) {
+            var i = 'abc';
+            console.log(i); //只会出现一次“abc”
+        }
+
+        //let 内部声明的i 不会覆盖外部的i
+        for (let i = 0; i < 3; i++) {
+            let i = 'abc';
+            console.log(i); //会出现3次“abc”
+        }
+
+
+        var elems = document.getElementsByTagName('a');
+        for (let i = 0; i < elems.length; i++) {
+            elems[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('点击的是第  ' + (i + 1) + " 按钮！");
+            }, false);
+        }
+        //等价于  var声明的变量会被重新赋值，所以需要闭包
+        for (var i = 0; i < elems.length; i++) {
+            (function (index) {
+                elems[index].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    alert('点击的是第  ' + (index + 1) + " 按钮！");
+                }, false);
+            })(i);
+        }
+
+        /**
+         * 常量 const
+         * 声明的常量不可以修改其值
+         * 声明了就必须初始化，不可以先声明，后初始化
+         * const声明的常量，也与let一样不可重复声明。
+         * const只能保证这个指针是固定的
+         */
+        const PI = 3.1415;
+        //const PI=5.0;   //报错：Identifier 'PI' has already been declared
+        console.log(PI);
+        //* const只能保证这个指针是固定的
+        const ary = [], obj = {};
+        ary.push("a");
+        obj.a = "123456";
+        console.log(ary); //["a"]
+        console.log(obj);   //{a:"123456"}
+        //ary = ["b"];    //报错：Assignment to constant variable
+
+
+        /**
+         * 获取顶层对象（window/global/self）
+         */
+            // 方法一
+        (typeof window !== 'undefined' ? window :
+                (typeof process === 'object' && typeof require === 'function' && typeof global === 'object')? global : this);
+        // 方法二
+        var getGlobal = function () {
+            if (typeof self !== 'undefined') { return self; }
+            if (typeof window !== 'undefined') { return window; }
+            if (typeof global !== 'undefined') { return global; }
+            throw new Error('unable to locate global object');
+        };
+    }
+</script>
+</body>
+</html>

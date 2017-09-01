@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>模块化的一些小东西</title>
+</head>
+<body style="background: #f5f5f5;">
+<div id="div"></div>
+
+<script src="javascript/require.js"></script>
+<script>
+    require.config({
+        baseUrl: "",
+        paths: {
+            'jquery': 'javascript/jquery-1.11.1.min'
+        },
+        shim: {
+            "jquery": {
+                "exports": "$"
+            }
+        }
+    });
+
+
+    require(["jquery", "javascript/underscore", "js/a", "js/b"], function ($, _, a, b) {
+        $("#div").html("123456");
+    })
+</script>
+</body>
+</html>

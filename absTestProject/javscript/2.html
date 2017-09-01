@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+<script>
+    console.group("测试：isNaN");
+    console.log("判断NaN：" + isNaN(NaN));
+    console.log("判断数字整型：" + isNaN(10));
+    console.log("判断数字浮点型：" + isNaN(10.124));
+    console.log("判断布尔：" + isNaN(true));
+    console.log("判断字符串：" + isNaN("true"));
+    console.groupEnd();
+    console.group("测试：Number");
+    console.log("null转换成数字：" + Number(null));
+    console.log("undefined转换成数字：" + Number(undefined));
+    console.log("布尔true转换成数字：" + Number(true));
+    console.log("换成数字：" + Number(72));
+    console.log("16进制转换10进制：" + Number(0xADF));
+    console.log("8进制转换10进制：" + Number(072));
+    console.log("字符串转换成数字：" + Number("12138 xujiqiang  131421"));
+    console.groupEnd();
+    console.group("测试：parseInt");
+    console.log("16进制转换10进制：" + parseInt("0xADF", 16));
+    console.log("8进制转换10进制：" + parseInt("072", 8));
+    console.log("字符串转换成数字：" + parseInt(" 1 12138.11 xujiqiang  131421"));
+    console.log(parseInt(10, 2));
+    console.log(parseInt(10, 8));
+    console.log(parseInt(10, 10));
+    console.log(parseInt(10, 16));
+    console.groupEnd();
+
+    var str = 10;
+    console.log(String(str) + "\n" + str.toString(2));
+</script>
+</body>
+</html>

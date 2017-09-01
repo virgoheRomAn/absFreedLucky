@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "微软雅黑", sans-serif, "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    outline: none;
+    color: #000000;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.x-wrap {
+    position: relative;
+    display: block;
+    width: 1000px;
+    margin: auto;
+}
+
+.x-box {
+    display: block;
+    width: 100%;
+}
+
+.x-box-none {
+    padding: 100px 0;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.x-box-none span, .x-box-none a {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.x-box-none span {
+    color: #4a4a4a;
+    margin-top: 10px;
+}
+
+a.cor-red {
+    color: #e60012;
+}
+
+.x-box-have {
+    width: 100%;
+}
+
+.x-table-bar {
+    margin: 15px auto 150px;
+}
+
+.x-table-title {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+    background: #e60012;
+}
+
+.x-list {
+    display: block;
+    clear: both;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.x-list:after {
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: visible;
+}
+
+.x-list span {
+    color: #FFFFFF;
+    font-size: 16px;
+    float: left;
+    width: 33.33%;
+}
+
+.x-table-cont {
+    display: block;
+    width: 100%;
+}
+
+.x-list-bar {
+    display: block;
+}
+
+.x-list-bar .x-list {
+    height: 50px;
+    line-height: 50px;
+    border: 1px dashed #ff7a84;
+    background: #f6f8fa;
+    padding: 0 40px;
+    margin: 10px 0;
+}
+
+.x-list-bar .x-list span {
+    color: #242424;
+    font-weight: bold;
+}
+
+.x-list-bar .x-list span.font1, .x-list-bar .x-list span.font2 {
+    color: #e60012;
+}
+
+.x-list-bar .x-list span.font1 {
+    font-weight: normal;
+}
+
+.x-list-tips {
+    display: block;
+    padding: 0 50px 0 40px;
+    margin: 0;
+    font-size: 16px;
+    color: #050505;
+    line-height: 24px;
+}
+
+.x-list-tips span {
+    color: #e60012;
+}
+
+.x-tips {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.x-tips span, .x-tips a {
+    display: block;
+}

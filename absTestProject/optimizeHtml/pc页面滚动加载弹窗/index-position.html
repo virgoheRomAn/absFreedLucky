@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>pc页面滚动条滚动</title>
+    <link rel="stylesheet" href="css/public.pc.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/jBox.css"/>
+    <link rel="stylesheet" href="css/sliderBox.position.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+    <link rel="stylesheet" href="css/special-index.css"/>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-bar">
+        <div class="slider-container slider-banner">
+            <ul class="slider-bar">
+                <li>
+                    <a href="#"><img class="load-img" data-load-src="img/slideImg/banner1.jpg"></a>
+                    <div class="slide-placeholder"><img src="img/index/lazyload.gif"></div>
+                </li>
+                <li>
+                    <a href="#"><img class="load-img" data-load-src="img/slideImg/banner2.jpg"></a>
+                    <div class="slide-placeholder"><img src="img/index/lazyload.gif"></div>
+                </li>
+                <li>
+                    <a href="#"><img class="load-img" data-load-src="img/slideImg/banner3.jpg"></a>
+                    <div class="slide-placeholder"><img src="img/index/lazyload.gif"></div>
+                </li>
+                <li>
+                    <a href="#"><img class="load-img" data-load-src="img/slideImg/banner4.jpg"></a>
+                    <div class="slide-placeholder"><img src="img/index/lazyload.gif"></div>
+                </li>
+            </ul>
+            <div class="slider-btn">
+                <a href="javascript:;" class="prev"><i></i></a>
+                <a href="javascript:;" class="next"><i></i></a>
+            </div>
+            <div class="slider-paging"></div>
+        </div>
+
+        <div class="wrap-1198">
+            <div class="hotProduct-bar">
+                <div class="slider-container slider-hotProduct">
+                    <ul class="slider-bar">
+                        <li class="slide-item">
+                            <a href="#">
+                                <div class="pro-information">
+                                    <p class="pro-name">阿颖山药五果营养粉</p>
+                                    <span class="pro-intro">送一盒营养餐粗粮饮</span>
+
+                                    <p class="pro-price">￥<span>48</span>.00</p>
+                                </div>
+                                <div class="pro-img">
+                                    <label><img src="img/slideImg/hotPro1.jpg"></label>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="slide-item">
+                            <a href="#">
+                                <div class="pro-information">
+                                    <p class="pro-name">阿颖山药五果营养粉2</p>
+                                    <span class="pro-intro">送一盒营养餐粗粮饮2</span>
+
+                                    <p class="pro-price">￥<span>4812</span>.00</p>
+                                </div>
+                                <div class="pro-img">
+                                    <label><img src="img/slideImg/hotPro2.jpg"></label>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="slider-paging"></div>
+                </div>
+            </div>
+            <div class="notice-bar">
+                <div class="notice-title">
+                    <i class="ui-icon icon-notice"></i>
+                    <span>集食惠公告</span>
+                </div>
+                <div class="slider-notice">
+                    <ul>
+                        <li><a href="#">要享团购价,去伙拼专区吧</a></li>
+                        <li><a class="active" href="#">口语：会说中文就能说英语！</a></li>
+                        <li><a href="#">集采账号介绍</a></li>
+                        <li><a href="#">万企集采.企业会员介绍</a></li>
+                        <li><a href="#">什么是集食惠平台的推荐码</a></li>
+                        <li><a href="#">输入文字12456</a></li>
+                        <li><a class="active" href="#">那些无法理解的荒唐事</a></li>
+                        <li><a href="#">农场摘菜不如在线学外语好玩</a></li>
+                        <li><a href="#">这个是最后一条，做个分割线</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap-1198 clearfix">
+
+        <!--轮播展示-->
+        <div class="slider-container-bar clearfix">
+            <!--单图轮播-->
+            <div class="slider-floor-bar">
+                <div class="slider-container slider-floor">
+                    <ul class="slider-bar">
+                        <li class="slide-item"><a href="#"><img src="img/slideImg/floor-ad1.jpg"></a></li>
+                        <li class="slide-item"><a href="#"><img src="img/slideImg/floor-ad2.jpg"></a></li>
+                        <li class="slide-item"><a href="#"><img src="img/slideImg/floor-ad3.jpg"></a></li>
+                        <li class="slide-item"><a href="#"><img src="img/slideImg/floor-ad4.jpg"></a></li>
+                    </ul>
+                    <div class="slider-paging"></div>
+                </div>
+            </div>
+            <!--无缝图片滚动-->
+            <div class="slider-floor-bar mar-l10">
+                <div class="slider-marquee-img">
+                    <ul>
+                        <li><a href="#"><img src="img/slideImg/floor-ad1.jpg"></a></li>
+                        <li><a href="#"><img src="img/slideImg/floor-ad2.jpg"></a></li>
+                        <li><a href="#"><img src="img/slideImg/floor-ad3.jpg"></a></li>
+                        <li><a href="#"><img src="img/slideImg/floor-ad4.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--多图轮播-->
+            <div class="slider-floor-bar float-right slider-floor-right">
+                <div class="slider-product">
+                    <ul class="slider-bar" style="width: 1000px;">
+                        <li>
+                            <a href="#">
+                                <div class="slider-img"><img src="img/slideImg/floor-ad1.jpg"></div>
+                                <div class="slider-information normal">
+                                    <p class="slider-name">有机酸牛奶<i></i></p>
+
+                                    <p class="slider-intro">绿色没事 特供佳品 全场包邮</p>
+
+                                    <p class="slider-price">￥<span>109</span>.00</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slider-img"><img src="img/slideImg/floor-ad2.jpg"></div>
+                                <div class="slider-information normal">
+                                    <p class="slider-name">五香味 香瓜子<i></i></p>
+
+                                    <p class="slider-intro">绿色没事 特供佳品 全场包邮</p>
+
+                                    <p class="slider-price">￥<span>109</span>.00</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slider-img"><img src="img/slideImg/floor-ad3.jpg"></div>
+                                <div class="slider-information normal">
+                                    <p class="slider-name">东北大米<i></i></p>
+
+                                    <p class="slider-intro">绿色没事 特供佳品 全场包邮 绿色没事 特供佳品 绿色没事 特供佳品</p>
+
+                                    <p class="slider-price">￥<span>109</span>.00</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slider-img"><img src="img/slideImg/floor-ad4.jpg"></div>
+                                <div class="slider-information normal">
+                                    <p class="slider-name">生鲜水果<i></i></p>
+
+                                    <p class="slider-intro">绿色没事 特供佳品 全场包邮</p>
+
+                                    <p class="slider-price">￥<span>109</span>.00</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-floor recommend">
+            <div class="floor-cont text"> 推荐楼层</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor activity">
+            <div class="floor-cont text"> 广告楼层</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-1" data-floor="1F">
+            <span>1F</span>
+
+            <div class="floor-cont">楼层容器，这是1F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-2" data-floor="2F">
+            <span>2F</span>
+
+            <div class="floor-cont">楼层容器，这是2F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-3" data-floor="3F">
+            <span>3F</span>
+
+            <div class="floor-cont">楼层容器，这是3F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-4" data-floor="4F">
+            <span>4F</span>
+
+            <div class="floor-cont">楼层容器，这是4F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-5" data-floor="5F">
+            <span>5F</span>
+
+            <div class="floor-cont">楼层容器，这是5F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-6" data-floor="6F">
+            <span>6F</span>
+
+            <div class="floor-cont">楼层容器，这是6F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-7" data-floor="7F">
+            <span>7F</span>
+
+            <div class="floor-cont">楼层容器，这是7F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-8" data-floor="8F">
+            <span>8F</span>
+
+            <div class="floor-cont">楼层容器，这是8F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-9" data-floor="9F">
+            <span>9F</span>
+
+            <div class="floor-cont">楼层容器，这是9F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+        <div class="container-floor floor-bar floor-10" data-floor="10F">
+            <span>10F</span>
+
+            <div class="floor-cont">楼层容器，这是10F</div>
+            <div class="floor-loading"><img src="img/index/lazyload.gif"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrap-1198 text">Footer底部容器</div>
+    </div>
+    <div class="floor-menu">
+        <a href="#1F" data-text="果蔬生鲜">1F</a>
+        <a href="#2F" data-text="粮油干活">2F</a>
+        <a href="#3F" data-text="休闲食品">3F</a>
+        <a href="#4F" data-text="肉禽蛋奶">4F</a>
+        <a href="#5F" data-text="进口食品">5F</a>
+        <a href="#6F" data-text="酒水茶饮">6F</a>
+        <a href="#7F" data-text="营养食品">7F</a>
+        <a href="#8F" data-text="礼盒产品">8F</a>
+        <a href="#9F" data-text="母婴专区">9F</a>
+        <a href="#10F" data-text="其他产品">10F</a>
+    </div>
+    <div class="index-right-menu">
+        <div class="index-menu">
+            <div class="index-menu-bar">
+                <div class="index-menu-link">
+                    <div class="link-item link-shop-car">
+                        <a class="menu-shop-car" href="javascript:;" data-id="shopCar"><i></i>购 物
+                            车<label>99</label></a>
+                    </div>
+                    <div class="link-item ">
+                        <a class="menu-collect-bar" href="javascript:;" data-id="collectBar"><i></i>我的收藏</a>
+
+                        <div class="link-item-tips"><span>我的收藏</span></div>
+                    </div>
+                    <div class="link-item ">
+                        <a class="menu-history-bar" href="javascript:;" data-id="historyBar"><i></i>历史纪录</a>
+
+                        <div class="link-item-tips"><span>历史纪录</span></div>
+                    </div>
+                    <div class="link-item">
+                        <a class="menu-customer-bar" href="javascript:;"><i></i>联系客服</a>
+
+                        <div class="service-bar">
+                            <a class="service-qq" href="javascript:;"><i></i>在线咨询</a>
+                            <span class="service-tips service-tips1"><i></i>售后服务电话</span>
+                            <label class="service-phone">4000-266-357</label>
+                            <span class="service-tips service-tips2"><i></i>电话服务时间</span>
+
+                            <p class="service-time">
+                                <span>8:45 - 20:30(工作日)<br>8:45 - 17:45(节假日)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="index-menu-btn">
+                <div class="link-item ">
+                    <a class="menu-code-bar" href="javascript:;"><i></i>扫描二维码</a>
+
+                    <div class="two-code-bar">
+                        <img src="img/index/timg.jpg">
+                        <span>扫描下方二维码</span>
+                    </div>
+                </div>
+                <div class="link-item ">
+                    <a class="menu-top-bar" href="javascript:;" id="goTop"><i></i>置顶</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-content">
+            <div class="index-module shop-car-module" data-type="shopCar">
+                <div class="index-shop-car none">
+                    <label><img src="img/index/none-icon-shopcar.png"></label>
+                    <span>您的购物车还是空的~~</span>
+                </div>
+                <div class="index-shop-car">
+                    <div class="module-scroll-bar">
+                        <ul class="shop-car-list">
+                            <li>
+                                <div class="shop-car-cont">
+                                    <a class="stores-name" href="#">
+                                        <label>好又多旗舰店</label>
+                                        <span>¥356.00</span>
+                                    </a>
+
+                                    <div class="stores-shop">
+                                        <a href="#" class="clearfix">
+                                            <label class="shop-img"><img src="img/index/product.jpg"></label>
+                                            <span class="shop-name">苏州市相城区阳澄湖镇金色蟹业有限公司O2O</span>
+                                            <span class="shop-number">2000</span>
+                                            <span class="shop-price">¥99999.00</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shop-car-cont">
+                                    <a class="stores-name" href="#">
+                                        <label>虫草花旗舰店</label>
+                                        <span>¥356.00</span>
+                                    </a>
+
+                                    <div class="stores-shop">
+                                        <a href="#" class="clearfix">
+                                            <label class="shop-img"><img src="img/index/product.jpg"></label>
+                                            <span class="shop-name">苏州市相城区阳澄湖镇金色蟹业有限公司O2O</span>
+                                            <span class="shop-number">2000</span>
+                                            <span class="shop-price">¥99999.00</span>
+                                        </a>
+                                    </div>
+                                    <div class="stores-shop">
+                                        <a href="#" class="clearfix">
+                                            <label class="shop-img"><img src="img/index/product.jpg"></label>
+                                            <span class="shop-name">苏州市相城区阳澄湖镇金色蟹业有限公司O2O</span>
+                                            <span class="shop-number">2000</span>
+                                            <span class="shop-price">¥99999.00</span>
+                                        </a>
+                                    </div>
+                                    <div class="stores-shop">
+                                        <a href="#" class="clearfix">
+                                            <label class="shop-img"><img src="img/index/product.jpg"></label>
+                                            <span class="shop-name">苏州市相城区阳澄湖镇金色蟹业有限公司O2O</span>
+                                            <span class="shop-number">2000</span>
+                                            <span class="shop-price">¥99999.00</span>
+                                        </a>
+                                    </div>
+                                    <div class="stores-shop">
+                                        <a href="#" class="clearfix">
+                                            <label class="shop-img"><img src="img/index/product.jpg"></label>
+                                            <span class="shop-name">苏州市相城区阳澄湖镇金色蟹业有限公司O2O</span>
+                                            <span class="shop-number">2000</span>
+                                            <span class="shop-price">¥99999.00</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop-car-btn">
+                        <a href="javascript:;">去购物车结算<i></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-module collect-module" data-type="collectBar">
+                <div class="index-shop-car none">
+                    <label><img src="img/index/none-icon-collect.png"></label>
+                    <span>您的收藏夹还是空的~~</span>
+                </div>
+                <div class="index-shop-car index-collect-bar">
+                    <div class="module-scroll-bar">
+                        <div class="collect-list-cont">
+                            <h2 class="collect-title">
+                                <a class="close-index-cont" href="javascript:;"></a>
+                                <span>我的收藏</span>
+                            </h2>
+                            <ul class="collect-list clearfix">
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop-car-btn collect-bar-btn">
+                        <a href="javascript:;">查看全部<i></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-module history-module" data-type="historyBar">
+                <div class="index-shop-car none">
+                    <label><img src="img/index/none-icon-look.png"></label>
+                    <span>您还没浏览过产品~~</span>
+                </div>
+                <div class="index-shop-car index-collect-bar">
+                    <div class="module-scroll-bar">
+                        <div class="collect-list-cont">
+                            <h2 class="collect-title">
+                                <a class="close-index-cont" href="javascript:;"></a>
+                                <span>历史纪录</span>
+                            </h2>
+                            <ul class="collect-list clearfix">
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collect-shop">
+                                        <div class="collect-shop-img">
+                                            <a href="#2" class="collect-shop-link">
+                                                <img src="img/index/product.jpg">
+                                            </a>
+                                            <a href="#1" class="jion-car">加入购物车</a>
+                                        </div>
+                                        <label>¥356.00</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop-car-btn collect-bar-btn">
+                        <a href="javascript:;">查看全部<i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="wrap-1198"
+     style="height: 85px; background: #000; position: fixed; bottom: 0; left: 50%; margin: 0 0 0 -599px; z-index: 500;">
+    <div class="handel-bar">
+        <a href="javascript:;" onclick="alertFun()">普通提示</a>
+        <a href="javascript:;" onclick="errorFun()">错误提示</a>
+        <a href="javascript:;" onclick="successFun()">成功提示</a>
+        <a href="javascript:;" onclick="waringFun()">警告提示</a>
+        <a href="javascript:;" onclick="loadingFun()">加载中...</a>
+        <a href="javascript:;" onclick="confirmFun()">询问框-双按钮</a>
+        <a href="javascript:;" onclick="confirmFun2()">询问框-单按钮</a>
+        <a href="javascript:;" onclick="promptFun()">输入提示框</a>
+    </div>
+</div>
+<div class="disk-bar" style="display: none;">
+    <div class="disk-container">
+        <a class="disk-close" href="javascript:;" onclick="this.parentNode.parentNode.style.display='none';"></a>
+
+        <div class="disk-content">
+            <label><i>5</i>元</label>
+            <span>10月26日-11月31日满100元可用5元券</span>
+            <a href="#">已发到您的账户去看去</a>
+        </div>
+    </div>
+</div>
+
+<!--双12优惠券提示框-->
+<div class="x-disk-bar" style="display: block;">
+    <div class="x-disk-container disk-container-1212">
+        <div class="x-disk-box disk-box-1212">
+            <a class="x-disk-close disk-close-1212" href="javascript:;"
+               onclick="document.getElementsByClassName('x-disk-bar')[0].style.display='none';"><i></i></a>
+
+            <div class="x-disk-cont disk-cont-1212">
+                <h2 class="x-disk-title disk-title-1212">
+                    <span><img src="img/ticketDisk/ticket-title-1212.png"></span>
+                </h2>
+                <div class="x-disk-intro disk-intro-1212">
+                    <p><img src="img/ticketDisk/ticket1.png"></p>
+                    <p><img src="img/ticketDisk/ticket2.png"></p>
+                    <div class="x-disk-btn disk-btn-1212">
+                        <a href="#">已发到您的账户去查看</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="disk-bar order-disk" style="display: block;">-->
+    <!--<div class="disk-container">-->
+        <!--<a class="disk-close" href="javascript:;" onclick="this.parentNode.parentNode.style.display='none';"></a>-->
+        <!--<a class="disk-btn" href="#"></a>-->
+    <!--</div>-->
+<!--</div>-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.jbox.js"></script>
+<script src="js/jquery.scrollLoading.js"></script>
+<script src="js/jquery.sliderBox.position.js"></script>
+<script>
+    $(function () {
+        $(".slider-banner").sliderBox("fade", {autoPlay: 3000});
+
+        $(".slider-hotProduct").sliderBox("slide", {pageRail: true, autoPlay: 1000, direction: "V"});
+
+        $(".slider-notice").sliderBox("marquee", {autoPlay: 50, direction: "V"});
+
+        $(".slider-floor").sliderBox("slide", {pageRail: true, autoPlay: 1500});
+
+        $(".slider-marquee-img").sliderBox("marquee", {pageRail: true, autoPlay: 15, direction: "V", defaultClone: 3});
+
+//        $(".slider-product").sliderBox("sliderNum");
+    });
+</script>
+<script>
+    $.jBox.configFun(function (opt) {
+//        opt.icon.location = "img/";
+    });
+
+    function alertFun() {
+        $.jBox.alert("这是提示信息！这是提示信息！");
+    }
+
+    function errorFun() {
+        $.jBox.error("这是错误信息！", {
+            box: {animate: "shake"}
+        });
+    }
+
+    function successFun() {
+        $.jBox.success("这是正确信息！", {
+            box: {animate: "wobble"}
+        });
+    }
+
+    function waringFun() {
+        $.jBox.waring("这是警告信息！", {
+            box: {animate: "bounceInDown"}
+        });
+    }
+
+    function loadingFun() {
+        $.jBox.loading("正在加载中...", {
+            box: {animate: "lightSpeedIn"}
+        });
+    }
+
+    function confirmFun() {
+        $.jBox.confirm("是否想好了，退出此APP？<br>嗯，干得漂亮，就看你的了！", {
+            box: {animate: "slideInDown"},
+            title: "确定退出嘛",
+            icon: {
+                location: "img/12456/",
+                src: "jBox/Jalert.png"
+            },
+            btn: {
+                text: ["确定", "取消"],
+                jEnsure: function (opt) {
+                    $.jBox.alert("您点击了" + opt.btn.text[0] + "按钮！");
+                },
+                jCancel: function (opt) {
+                    $.jBox.alert("您点击了" + opt.btn.text[1] + "按钮！");
+                }
+            },
+            css: {
+                textCSS: {"color": "#333"},
+                titleCSS: {
+                    "background": "#ffc"
+                }
+            }
+        });
+    }
+
+    function confirmFun2() {
+        $.jBox.btnAlert("是否想好了，退出此APP？<br>嗯，干得漂亮，就看你的了！", {
+            box: {animate: "fadeInUpBig"},
+            icon: {
+                src: "img/jBox/jError.png"
+            },
+            btn: {
+                text: ["确定"],
+                jEnsure: function (opt) {
+                    $.jBox.alert("您点击了" + opt.btn.text[0] + "按钮！");
+                }
+            }
+        });
+    }
+
+    function promptFun() {
+        $.jBox.prompt("点击“确定获取”获取内容信息", {
+            box: {animate: "flipInX"},
+            title: "是否获取输入的信息",
+            btn: {
+                text: "确定获取",
+                jEnsure: function () {
+                    $.jBox.alert("您获取的结果：" + $(this).prev("span").find("input").val() + "！");
+                }
+            }
+        }, {
+            boxCSS: {
+                "width": "270px"
+            },
+            titleCSS: {
+                "color": "red"
+            }
+        });
+    }
+
+
+    $(function () {
+        //页面滚动
+        window_scroll({
+            menu_fixed: true,   //左侧菜单是否 固定
+            initBeforeFun: function (ele, height) {
+                //加载之前执行
+                //例如隐藏某些标签等等
+                $(".index-shop-car").height(height - 76);
+                $(ele).hide();
+            },
+            initAfterFun: function (floor) {
+                //加载之后执行
+                //此处加载超出屏幕的楼层
+                //this-当前需要加载显示的楼层容器，floor-当前楼层编号
+                //console.log(this, floor);
+                $(this).find(".floor-cont").show();
+                $(this).find(".floor-loading").hide();
+            },
+            scrollFun: function (floor, floorTop, height) {
+                //滚动执行
+                //此处加载超出屏幕的楼层
+                //this-当前需要加载显示的楼层容器，floor-当前楼层编号
+                $(this).find(".floor-cont").show();
+                $(this).find(".floor-loading").hide();
+                if (height > floorTop) {
+                    $("a[href='#" + (floor) + "F']").addClass("active_link").siblings().removeClass("active_link");
+                } else if (height >= $(document).height() - $(window).height()) {
+                    $("a[href='#10F']").addClass("active_link").siblings().removeClass("active_link");
+                }
+            }
+        });
+
+        //右侧菜单
+        var open = false;
+        var ele = "", current = "";
+        var w = 0, r = 0;
+        var $rightMenu = $(".index-right-menu"), $module = $(".index-module");
+        var $menuBar = $(".index-menu-bar"), $menuCont = $(".index-content");
+        $menuBar.find(".link-item").click(function (event) {
+            var e = event || window.event;
+            e.stopPropagation();
+            var id = $(this).find("a").data("id");
+            if (!id) return false;
+            $menuCont.find(".index-module").each(function () {
+                if ($(this).data("type") === id) {
+                    w = $(this).width();
+                    r = w;
+                    ele = this;
+                }
+            });
+            if ($(this).hasClass("active")) {
+                $rightMenu.animate({"width": w + "px", "right": -r + "px"}, 500);
+                open = false;
+                $(this).removeClass("active");
+                return false;
+            } else {
+                $(this).addClass("active").siblings().removeClass("active");
+                current = this;
+                $module.css({"z-index": "1000", "top": "0px"}).addClass("scaleDown");
+                $(ele).removeClass("scaleDown");
+                if (!open) {
+                    $rightMenu.animate({"width": w + "px", "right": "0px"}, 500);
+                    $(ele).css({"z-index": "1001", "top": "0px"});
+                    open = true;
+                } else {
+                    $(ele).css({"z-index": "1001", "top": "100%"}).animate({"top": "0"});
+                    $rightMenu.animate({"width": w + "px", "right": "0px"}, 500);
+                }
+            }
+        });
+
+        $(document.body).click(function (event) {
+            var e = event || window.event;
+            e.stopPropagation();
+            if (!$(e.target).parents(".index-right-menu").length) {
+                $rightMenu.animate({"width": w + "px", "right": -r + "px"}, 500);
+                open = false;
+                $(current).removeClass("active");
+            }
+        });
+
+        $(".close-index-cont").click(function () {
+            $rightMenu.animate({"width": w + "px", "right": -r + "px"}, 500);
+            open = false;
+            $(current).removeClass("active");
+        });
+
+        var floor = $(".floor-bar");
+        floor.each(function () {
+            var $this = $(this);
+            $this.find(".floor-cont").css("background", getRandomColor());
+        });
+
+        function getRandomColor() {
+            return '#' +
+                    (function (color) {
+                        return (color += '0123456789abcdef'[Math.floor(Math.random() * 16)])
+                        && (color.length == 6) ? color : arguments.callee(color);
+                    })('');
+        }
+    })
+</script>
+</body>
+</html>
