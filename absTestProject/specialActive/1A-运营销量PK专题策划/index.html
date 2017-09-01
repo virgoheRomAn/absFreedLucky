@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>运营销量PK专题策划</title>
+    <link rel="stylesheet" href="css/reset.phone.min.css"/>
+    <link rel="stylesheet" href="css/slide.css"/>
+</head>
+<body>
+<div class="s-wrap">
+    <div class="s-container">
+        <div class="s-slide"><span class="f-tc">第一屏</span></div>
+        <div class="s-slide"><span class="f-tc">第二屏</span></div>
+        <div class="s-slide"><span class="f-tc">第三屏</span></div>
+        <div class="s-slide"><span class="f-tc">第四屏</span></div>
+        <div class="s-slide"><span class="f-tc">第五屏</span></div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/xSlide.js"></script>
+<script>
+    $(function () {
+        $(".s-slide").each(function () {
+            $(this).css("background", randomColor());
+        });
+    });
+
+    function randomColor() {
+        return "#" + (function (c) {
+                    return (c += "0123456789ABCDEF"[Math.floor(Math.random() * 16)])
+                    && (c.length >= 6) ? c : arguments.callee(c);
+                })("");
+    }
+</script>
+</body>
+</html>

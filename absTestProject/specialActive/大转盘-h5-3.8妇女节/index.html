@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="overflow-hidden">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>魅力女人节，幸福转不停</title>
+    <link rel="stylesheet" href="css/public.phone.min.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body class="main-body overflow-hidden">
+<div class="lottery-bar">
+    <h2 class="lottery-title">
+        <a class="lottery-back" href="javascript:;">返回</a>
+        <span>3·8节幸福转不停</span>
+        <a class="lottery-share" href="javascript:;">分享</a>
+    </h2>
+
+    <div class="lottery-container">
+        <div class="lottery-header"><img src="img/banner.jpg"></div>
+        <div class="lottery-main">
+            <label class="lottery-bg"><img src="img/lottery-bg.jpg"></label>
+
+            <div class="lottery-canvas">
+                <canvas id="lotteryGameView" width="350px" height="350px"></canvas>
+                <label id="lotteryGameBtn"><img src="img/lottery-bth.png"></label>
+            </div>
+            <div class="lottery-number">
+                <span>你还有<i>1</i>次抽奖机会</span>
+            </div>
+        </div>
+
+
+        <div class="lottery-list">
+            <div class="lottery-module">
+                <i class="pos-abs-tl atmosphere1-t"><img src="img/atmosphere1-t.png"></i>
+                <i class="pos-abs-br atmosphere1-b"><img src="img/atmosphere1-b.png"></i>
+
+                <div class="active-explain">
+                    <h2 class="active-hd"><label><img src="img/list-title-text1.png"></label></h2>
+
+                    <div class="active-bd">
+                        <p><i>1、</i>抽奖活动时间：2017年02月23日至2017年03月08日；</p>
+
+                        <p><i>2、</i>抽奖资格：每次购买成功，均可获得一次抽奖机会；</p>
+
+                        <p><i>3、</i>优惠券抽中即可在下单时使用，使用规则请在优惠券管理功能中查看；</p>
+
+                        <p><i>4、</i>满减券和现金券可叠加使用，同类型优惠券每次下单只能使用一张；</p>
+
+                        <p><i>5、</i>重庆礼仪之邦电子商务有限公司对本活动拥有最终解释权；</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lottery-module mar-t20">
+                <i class="pos-abs-tl atmosphere2-t"><img src="img/atmosphere2-t.png"></i>
+                <i class="pos-abs-br atmosphere2-b"><img src="img/atmosphere2-b.png"></i>
+
+                <div class="active-explain">
+                    <h2 class="active-hd"><label><img src="img/list-title-text2.png"></label></h2>
+
+                    <div class="active-bd">
+                        <div class="list-win">
+                            <ul id="winListContainer"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="loading pos-abs-tl">
+    <div class="loading-box">
+        <div class="loading-img">
+            <img src="img/jBox/jLoading.gif">
+        </div>
+        <div class="loading-progress">加载进度...</div>
+    </div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.jbox-h5.js"></script>
+<script src="js/prepareImg.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script src="js/js.js"></script>
+<script type="text/template" id="winList">
+    <li>
+        <span class="win-userName text-overflow">*%userName%*</span>
+        <span>获得</span>
+        <span class="win-priceName">*%priceName%*</span>
+    </li>
+</script>
+<script type="text/template" id="diskBox">
+    <div class="disk-bar">
+        <div class="disk-container">
+            <div class="disk-content">
+                <div class="top"></div>
+                <div class="mid">
+                    <h2 class="disk-title *%titleCls%*"><label>*%title%*</label></h2>
+
+                    <div class="disk-img">*%diskImg%*</div>
+                    <div class="disk-text">*%diskText%*</div>
+                    <div class="disk-btn"><a class="disk-handle" href="javascript:;">确定</a></div>
+                </div>
+                <div class="bto"></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    $(function () {
+        window.locationSrc = "img/jBox/";
+        $.jBox.confirm("信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容", ["妇女节", "3·8节日"], {
+            onEnsureFun: function () {
+                $.jBox.alert("YES！信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容");
+            }
+        }, "jAlert1.png");
+
+
+        var length = 30;
+        var _clearTimer_;
+        $(".lottery-canvas").lottery({
+            diskEle: "#diskBox",
+            occasion: 10,
+            allNum: 10,
+            timer: "2017.02.23-2017.03.08",
+            productText: [
+                {price: 5, text: "5元现金券"},
+                {price: 0, text: "再接再厉"},
+                {price: 5, text: "满100减5"},
+                {price: 0, text: "再接再厉"},
+                {price: 20, text: "满200减20"},
+                {price: 2, text: "2元现金券"},
+                {price: 0, text: "再接再厉"},
+                {price: 8, text: "满100减8"}
+            ],
+            initFun: function (opt) {
+                var listContainer = $("#winListContainer");
+                var listMain = $("#winList");
+                var html = "";
+                for (var i = 0; i < length; i++) {
+                    html += listMain.html().replace("*%userName%*", "JSH136****2829")
+                            .replace("*%priceName%*", "20满减券");
+                }
+                listContainer.append(html);
+                marqueeText("#winListContainer", "top", 2000);
+                $(".lottery-number").find("i").text(opt.occasion);
+            },
+            finishFun: function (type) {
+                //判断当前中奖类型，用于剪掉剩余奖券
+                console.log(type);  //"none"-再接再厉，"满减券"-满减券，"现金券"-现金券
+            }
+        });
+
+        var marqueeText = function (tag, slideDir, time) {
+            clearInterval(_clearTimer_);
+            _clearTimer_ = setInterval(function () {
+                var _top = parseInt($(tag).css("marginTop"));
+                var _moveHeight = $(tag).find("li:eq(0)").height();
+                switch (slideDir) {
+                    case "top":
+                        $(tag).animate({
+                            "marginTop": _top - _moveHeight + "px"
+                        }, 300, function () {
+                            $(tag).css({"marginTop": 0}).children("li").last().after($(tag).children("li").first());
+                        });
+                        break;
+                }
+            }, time);
+        };
+    })
+</script>
+</body>
+</html>

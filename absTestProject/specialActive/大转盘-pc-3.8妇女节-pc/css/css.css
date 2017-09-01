@@ -1,0 +1,342 @@
+.main-body {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff5f6;
+}
+
+.main-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    /*padding-bottom: 100px;*/
+    height: 1800px;
+    min-width: 1200px;
+    _width: expression((document.documentElement.clientWidth||document.body.clientWidth)<1202?'1200px':'');
+    background: url(../img/img-bg.jpg) no-repeat 50% 0;
+}
+
+.wrap1200 {
+    display: block;
+    width: 1199px;
+    height: 1800px;
+    background: url(../img/center-bg.jpg) no-repeat 50% 0;
+    margin: auto;
+    position: relative;
+}
+
+.header {
+    display: block;
+    height: 600px;
+    position: relative;
+}
+
+.active-turntable {
+    position: absolute;
+    left: 96px;
+    top: 52%;
+    z-index: 40;
+}
+
+.turntable-main {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 40;
+}
+
+.turntable-img {
+    display: block;
+    width: 559px;
+    height: 559px;
+    overflow: hidden;
+    transform-origin: center center;
+}
+
+.turntable-img img {
+    display: block;
+    width: 100%;
+}
+
+.turntable-btn {
+    display: block;
+    width: 188px;
+    height: 232px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -94px 0 0 -94px;
+    background: url("../img/lottery-btn.png") no-repeat;
+}
+
+.turntable-bto {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+    z-index: 30;
+    margin-left: -139px;
+}
+
+.content {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 424px;
+    margin-top: 350px;
+    margin-left: 22px;
+}
+
+.lottery-number {
+    position: relative;
+    width: 657px;
+    height: 206px;
+    background: url(../img/lottery-chance.png) no-repeat;
+}
+
+.lottery-num-text {
+    color: #f3106f;
+    font-weight: bold;
+    font-size: 22px;
+    position: relative;
+    top: 70px;
+    left: 302px;
+}
+
+span.residue-num {
+    display: inline-block;
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fde91f;
+    background: url(../img/rectangle.png) no-repeat;
+
+}
+
+.lottery-win-list {
+    position: absolute;
+    display: block;
+    width: 336px;
+    top: 56%;
+    right: 166px;
+}
+
+.lottery-win-list label img {
+    width: 336px;
+    height: 152px;
+}
+
+.lottery-win-content {
+    display: block;
+    width: 336px;
+    margin: auto;
+}
+
+.win-list-bar {
+    display: block;
+    margin: auto;
+    height: 350px;
+    overflow: hidden;
+}
+
+.win-list {
+    display: block;
+    width: 336px;
+    margin-left: 42px;
+}
+
+.win-list li {
+    width: 336px;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.win-list li span {
+    color: #272727;
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.win-list li label {
+    float: right;
+    text-align: right;
+    color: #272727;
+    width: 49%;
+    text-align: left;
+}
+
+.lottery-win-rule {
+    margin: auto;
+    width: 816px;
+    height: 295px;
+    background: url(../img/exercise-rule.png) no-repeat;
+    margin-top: 24px;
+}
+
+.lottery-win-rule h2 {
+    font: bold 20px "΢���ź�", "microsoft yahei";
+    color: #060606;
+    padding-top: 36px;
+    margin-left: 112px;
+}
+
+.rule-cont {
+    display: block;
+    font-size: 16px;
+    color: #333333;
+    line-height: 34px;
+    margin-top: 16px;
+    margin-left: 112px;
+}
+
+.disk-bar {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.disk-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -126px;
+    margin-top: -177px;
+    color: #FFFFFF;
+    width: 253px;
+    height: 355px;
+    background: url(../img/lottery-bg.png) no-repeat;
+}
+
+.divClose span {
+    color: #FFFFFF;
+    float: right;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.dist-cont {
+    margin-top: 40px;
+}
+
+.dist-cont .text {
+    display: block;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+}
+
+.dist-cont .img {
+    display: block;
+    text-align: center;
+    margin: 16px auto;
+
+}
+
+.dist-cont .img p {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.dist-cont .disk-handle {
+    display: block;
+    width: 161px;
+    height: 33px;
+    margin: auto;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    line-height: 33px;
+    background: url(../img/btn-bg.png) no-repeat;
+}
+
+.disk-container2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -126px;
+    margin-top: -177px;
+    color: #FFFFFF;
+    width: 253px;
+    height: 355px;
+    background: url(../img/favorable-endBg.png) no-repeat;
+}
+
+.img-bg {
+    position: relative;
+    display: block;
+    width: 142px;
+    height: 120px;
+    margin: auto;
+    background: url("../img/red-packet.png") no-repeat;
+}
+
+.img-bg span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #f6ff00;
+}
+
+.img-bg label {
+    display: block;
+    width: 92px;
+    margin: auto;
+    position: relative;
+    top: 15px;
+    left: 23px;
+    padding-left: 52px;
+    text-align: left;
+    font-size: 13px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 16px;
+
+}
+
+.img-bg label i {
+    display: block;
+    width: 42px;
+    text-align: right;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 34px;
+}
+
+.disk-container2 .spclose {
+    color: #bd1d4c;
+}
+
+.disk-container2 .disk-handle {
+    background: url(../img/btn-bg2.png) no-repeat;
+}
+
+.text-prompt {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}

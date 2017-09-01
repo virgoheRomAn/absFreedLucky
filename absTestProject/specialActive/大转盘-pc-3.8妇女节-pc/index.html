@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>女人节大转盘</title>
+    <link rel="stylesheet" href="css/public.pc.min.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body class="main-body">
+<div class="main-container">
+    <div class="wrap1200">
+        <div class="header clearfix">
+            <div class="active-turntable">
+                <div class="turntable-main">
+                    <label class="turntable-img"><img src="img/lottery-turntable1-3.8.png"></label>
+                    <a class="turntable-btn" href="javascript:;"></a>
+                </div>
+                <div class="turntable-bto"><img src="img/lottery-pedestal.png"></div>
+            </div>
+            <div class="lottery-win-list">
+                <label ><img src="img/lottery-list.png"/></label>
+                <div class="lottery-win-content">
+                    <div class="win-list-bar">
+                        <ul class="win-list">
+                            <li><span>1wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>2wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>3wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>4wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>5wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>6wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>7wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>8wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>9wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>10wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>11wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>12wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>13wjl****2wyl</span><label>5元现金券</label></li>
+                            <li><span>14wjl****2wyl</span><label>5元现金券</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="lottery-number">
+                <div class="lottery-num-text">
+                    <p>你今天还有<span class="residue-num">1</span>次抽奖机会</p>
+                </div>
+            </div>
+            <div class="lottery-win-rule">
+                <div class="activity-rule">
+                    <h2><span>活动规则介绍：</span></h2>
+                    <div class="rule-cont">
+                        1、抽奖活动时间：2017年02月23日至2017年03月08日；<br>
+                        2、抽奖资格：每次购买成功，均可获得一次抽奖机会；<br>
+                        3、优惠券抽中即可在下单时使用，使用规则请在优惠券管理功能中查看；<br>
+                        4、满减券和现金券不可叠加使用，同类型优惠券每次下单只能使用一张<br>
+                        5、重庆礼仪之邦电子商务有限公司对本活动拥有最终解释权。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script src="js/js.js"></script>
+<script type="text/template" id="diskBox">
+    <div class="disk-bar">
+        <div class="*%class%*">
+            <div class="divClose"><span class="spclose">×</span></div>
+            <div class="dist-cont">
+                <div class="text">*%text%*</div>
+                <div class="img">*%img%*</div>
+                <a class="disk-handle" href="javascript:;">确定</a>
+            </div>
+
+        </div>
+    </div>
+</script>
+<script>
+    $(function () {
+        var _clearTimer_;
+
+        $(".turntable-img").lottery({
+            lotteryImg: {
+                src: "img/lottery-turntable1-3.8.png",
+                w: 559,
+                h: 559
+            },
+            diskEle: "#diskBox",
+            occasion: 10,
+            allNum: 10,
+            productText: [
+                {price: 3, text: "3元现金券"},
+                {price: 0, text: "再接再厉"},
+                {price: 8, text: "8元现金券"},
+                {price: 5, text: "5元现金券"},
+                {price: 0, text: "再接再厉"},
+                {price: 3, text: "3元现金券"},
+                {price: 8, text: "8元现金券"},
+                {price: 5, text: "5元现金券"}
+            ],
+            initFun: function (opt) {
+                //转盘图片
+                $(".turntable-img").css({
+                    "width": opt.lotteryImg.w + "px",
+                    "height": opt.lotteryImg.h + "px"
+                }).find("img").attr("src", opt.location + opt.lotteryImg.src);
+
+                marqueeText(".win-list", "top", 2000);
+                $(".active-time").find("span").text(opt.timer);
+                $(".residue-num").text(opt.occasion);
+            },
+            finishFun: function (type) {
+                //判断当前中奖类型，用于剪掉剩余奖券
+                console.log(type);  //"none"-再接再厉，"满减券"-满减券，"现金券"-现金券
+            }
+        });
+        function marqueeText(tag, slideDir, time) {
+            clearInterval(_clearTimer_);
+            _clearTimer_ = setInterval(function () {
+                var _top = parseInt($(tag).css("marginTop"));
+                var _moveHeight = $(tag).find("li:eq(0)").height();
+                switch (slideDir) {
+                    case "top":
+                        $(tag).animate({
+                            "marginTop": _top - _moveHeight + "px"
+                        }, 300, function () {
+                            $(tag).css({"marginTop": 0}).children("li").last().after($(tag).children("li").first());
+                        });
+                        break;
+                }
+            }, time);
+        }
+    });
+</script>
+</body>
+</html>

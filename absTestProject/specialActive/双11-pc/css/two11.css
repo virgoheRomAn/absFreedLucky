@@ -1,0 +1,468 @@
+@charset "utf-8";
+html, body, div, b, span, img, ul, li, a, i {
+    margin: 0;
+    padding: 0;
+}
+
+/*清除浮动*/
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE678*/
+}
+
+.bg-box {
+    width: 100%;
+    height: 10654px;
+    min-width: 1200px;
+    background: url(../img/bg.jpg) no-repeat center;
+    font-family: "微软雅黑", "microsoft yahei";
+    overflow: hidden;
+    position: relative;
+}
+
+.count-down {
+    width: 805px;
+    color: #FFFFFF;
+    font-size: 37px;
+    position: absolute;
+    top: 624px;
+    left: 50%;
+    margin-left: -402.5px;
+
+}
+
+.count-down span {
+    color: #fef492;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0 5px;
+}
+
+.count-down b {
+    color: #fef492;
+    margin: 0 5px;
+}
+
+.slide-guide {
+    position: fixed;
+    right: 24px;
+    bottom: 120px;
+    width: 174px;
+    height: 501px;
+    background: url(../img/classify.png) no-repeat center;
+    z-index: 100;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+}
+
+.slide-guide .ui-item a.on {
+    color: #fd2248;
+}
+
+.ui-List .ui-item a {
+    text-decoration: none;
+    color: #5826D5;
+}
+
+.ui-List .ui-item a:hover {
+    color: #fd2248;
+}
+
+.ui-List li, .ul-fastms li {
+    list-style: none;
+}
+
+.slide-guide .ui-List {
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 180px;
+}
+
+.ui-List #lis-Item {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.ui-List .ui-item {
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+}
+
+.slide-guide .ui-item-top {
+    width: 106px;
+    height: 52px;
+    margin-left: -8px;
+}
+
+.ui-List .ui-item a, .ui-List .ui-item0 a, .ui-item-top a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*爆品大聚会*/
+.fastms-box {
+    width: 1071px;
+    height: 3157px;
+    position: absolute;
+    background: url(../img/fastms.png) no-repeat;
+    top: 844px;
+    left: 50%;
+    margin-left: -535.5px;
+
+}
+
+.columnTit {
+    background: url(../img/columnTit.fw.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.fastms-box .fastms-tit {
+    width: 501px;
+    height: 128px;
+    background-position: 0 0;
+    top: -46px;
+    left: 50%;
+    margin-left: -250.5px;
+
+}
+
+.fastms-box .ul-fastms {
+    width: 1026px;
+    margin: 0 auto;
+}
+
+.fastms-box .li-fastms-Item0 {
+    height: 502px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.fastms-box .li-fastms-Item {
+    height: 508px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.fastms-box .li-fastms-Item a {
+    width: 100%;
+    height: 100%;
+}
+
+/*精品水果*/
+.fruits-box {
+    width: 1152px;
+    height: 435px;
+    background: url(../img/fruits.png) no-repeat center;
+    position: absolute;
+    top: 39.8%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.fruits-box .fruits-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -142px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+.li-fruits-Item, .li-relaxation-Item, .li-winnow-Item, .li-seafood-Item, .li-oil-Item,
+.li-wine-Item, .li-meat-Item {
+    list-style: none;
+    float: left;
+    width: 347px;
+    height: 345px;
+    margin-left: 26px;
+    margin-top: 27px;
+    cursor: pointer;
+}
+
+ul .li-item {
+    margin-left: 31px;
+    margin-top: 65px;
+}
+
+ul .li-item1 {
+    margin-left: 31px;
+}
+
+ul .li-item2 {
+    margin-top: 44px;
+    margin-left: 5px;
+}
+
+ul .li-item3 {
+    margin-top: -345px;
+    margin-left: 403px;
+}
+
+ul .li-item4 {
+    margin-top: -346px;
+    margin-left: 51px;
+}
+
+ul .li-item5 {
+    margin-top: 6px;
+    margin-left: 227px;
+}
+
+ul .li-item6 {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.ul-wine .li-item5 {
+    margin-top: 8px;
+    margin-left: 226px;
+}
+
+.ul-wine .li-item6 {
+    margin-top: 8px;
+    margin-left: 6px;
+}
+
+.ul-fastms li a, .ul-fruits li a, .ul-relaxation li a, .ul-seafood li a,
+.ul-meat li a, .ul-oil li a, .ul-wine li a, .ul-winnow li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+/*休闲零嘴*/
+.relaxation-box {
+    width: 1152px;
+    height: 435px;
+    background: url(../img/relaxation.png) no-repeat center;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.relaxation-box .relaxation-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -710px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+/*特色生鲜*/
+.seafood-box {
+    width: 1152px;
+    height: 787px;
+    background: url(../img/seafood.png) no-repeat center;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.seafood-box .seafood-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -891px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+/*肉类精品*/
+.meat-box {
+    width: 1152px;
+    height: 787px;
+    background: url(../img/meat.png) no-repeat center;
+    position: absolute;
+    top: 61.5%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.meat-box .meat-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -331px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+/*酒水饮品*/
+.wine-box {
+    width: 1152px;
+    height: 1139px;
+    background: url(../img/wine.png) no-repeat center;
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.wine-box .wine-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -1080px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+/*粮油干货*/
+.oil-box {
+    width: 1152px;
+    height: 787px;
+    background: url(../img/oil.png) no-repeat center;
+    position: absolute;
+    top: 83.8%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.oil-box .oil-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -516px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+/*特色精选*/
+.winnow-box {
+    width: 1152px;
+    height: 435px;
+    background: url(../img/winnow.png) no-repeat center;
+    position: absolute;
+    top: 93.4%;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.winnow-box .winnow-tit {
+    width: 672px;
+    height: 157px;
+    background-position: 0 -1263px;
+    top: -176px;
+    left: 50%;
+    margin-left: -336px;
+}
+
+@-webkit-keyframes scaleIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes scaleIn {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0);
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scaleIn{
+    -webkit-animation: scaleIn .7s ease both;
+    -moz-animation: scaleIn .7s ease both;
+    animation: scaleIn .7s ease both;
+}
+
+@-webkit-keyframes scaleOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+}
+
+@-moz-keyframes scaleOut {
+    0% {
+        opacity: 1;
+        -moz-transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: scale(0);
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.scaleOut{
+    -webkit-animation: scaleOut .7s ease both;
+    -moz-animation: scaleOut .7s ease both;
+    animation: scaleOut .7s ease both;
+}

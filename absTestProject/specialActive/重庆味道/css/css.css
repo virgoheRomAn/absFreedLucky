@@ -1,0 +1,149 @@
+.main-body {
+    background: #edcfad;
+    background-size: 100% auto;
+    width: 100%;
+    position: relative;
+}
+
+.main-body img {
+    display: block;
+    width: 100%;
+}
+
+.header{
+    padding-top: 46px;
+}
+
+.lottery-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: block;
+    background: #f1e8f3;
+    height: 46px;
+    line-height: 46px;
+    width: 100%;
+    padding: 0 60px;
+    font-size: 18px;
+    color: #2f2f2f;
+}
+
+.lottery-title a.lottery-back,
+.lottery-title a.lottery-share {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 46px;
+    width: 60px;
+    text-indent: -9999px;
+}
+
+.lottery-title a.lottery-back:after,
+.lottery-title a.lottery-share:after {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    content: "";
+    width: 26px;
+    height: 20px;
+    margin-top: -10px;
+    background: url("../img/lottery-back.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.lottery-title a.lottery-share {
+    left: auto;
+    right: 0;
+}
+
+.lottery-title a.lottery-share:after {
+    width: 22px;
+    height: 21px;
+    margin-top: -10px;
+    left: auto;
+    right: 15px;
+    background: url("../img/lottery-share.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.lottery-title span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.header, .container, .banner,
+.hot-product, .hot-product-title, .hot-product-list,
+.recommend-product, .recommend-title, .recommend-list {
+    position: relative;
+    z-index: 12;
+    display: block;
+    width: 100%;
+}
+
+.header{
+    z-index: 100;
+}
+
+.hot-product-list a {
+    display: block;
+    width: 100%;
+}
+
+.recommend-product {
+    background: #edcfad;
+    padding-bottom: 10px;
+}
+
+.bg-top{
+    display: block;
+    width: 59.69%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 9;
+}
+
+.bg-right{
+    display: block;
+    width: 51.72%;
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    z-index: 9;
+}
+
+.recommend-title {
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.recommend-title img{
+    margin: 20px 0 5px 0;
+    width: 80.80%;
+    float: right;
+}
+
+.recommend-list ul {
+    display: block;
+    padding: 0 5px;
+}
+
+.recommend-list.reset-space > ul > li {
+    display: block;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.recommend-list a {
+    display: block;
+    width: 100%;
+}
+

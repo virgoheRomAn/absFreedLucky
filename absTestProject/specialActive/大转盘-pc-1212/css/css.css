@@ -1,0 +1,456 @@
+.main-body {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #eb3d63;
+    font-size: 12px;
+}
+
+.main-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    /*padding-bottom: 100px;*/
+    min-height: 1308px;
+    min-width: 1200px;
+    _width: expression((document.documentElement.clientWidth||document.body.clientWidth)<1202?'1200px':'');
+    background: url("../img/b-bg-1212.jpg") no-repeat 50% 0;
+}
+
+.wrap1200 {
+    display: block;
+    width: 1199px;
+    margin: auto;
+    position: relative;
+}
+
+.header {
+    display: block;
+    height: 1091px;
+    background: url("../img/bg1-1212.jpg") no-repeat 50% 0;
+    position: relative;
+}
+
+.active-time {
+    position: absolute;
+    top: 24%;
+    left: 200px;
+    z-index: 20;
+    display: block;
+    width: 223px;
+    height: 127px;
+    padding-top: 44px;
+    padding-left: 20px;
+    background: url("../img/icon_cloud.png") no-repeat;
+    color: #7642c0;
+}
+
+.active-time label, .active-time span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    left: -10px;
+}
+
+.active-time span{
+    top: -5px;
+}
+
+.active-time label {
+    font-size: 32px;
+    left: 0;
+}
+
+.active-logo {
+    position: absolute;
+    bottom: 219px;
+    left: 97px;
+    z-index: 30;
+}
+
+.active-turntable {
+    position: absolute;
+    right: 194px;
+    top: 20%;
+    z-index: 40;
+}
+
+.turntable-main {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 40;
+}
+
+.turntable-img {
+    display: block;
+    width: 601px;
+    height: 601px;
+    overflow: hidden;
+    transform-origin: center center;
+}
+
+.turntable-img img {
+    display: block;
+    width: 100%;
+}
+
+.turntable-btn {
+    display: block;
+    width: 202px;
+    height: 249px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -101px 0 0 -101px;
+    background: url("../img/lottery-btn.png") no-repeat;
+}
+
+.turntable-bto {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+    z-index: 30;
+    margin-left: -139px;
+}
+
+.content {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.gift-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 546px;
+    height: 115px;
+    margin-left: -273px;
+    background: url("../img/icon-gift-1212.png") no-repeat;
+}
+
+.lottery-number {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    color: #fde305;
+    margin: 51px 0 0 0;
+    text-align: center;
+    padding-left: 100px;
+}
+
+.lottery-number i {
+    background: #650e9b;
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 10px;
+    margin: 0 10px;
+    position: relative;
+    top: 2px;
+}
+
+.lottery-num-text {
+    color: #fde305;
+    font-size: 24px;
+    position: relative;
+    top: 100px;
+    left: -30px;
+}
+
+.lottery-win-list {
+    display: block;
+    width: 1200px;
+    height: 587px;
+    margin: auto;
+    background: url("../img/lottery-list-1212.jpg") no-repeat;
+}
+
+.lottery-win-list h2 {
+    display: block;
+    width: 1000px;
+    margin: auto;
+}
+
+.lottery-win-list h2 span {
+    display: block;
+    width: 215px;
+    height: 82px;
+    line-height: 90px;
+    text-align: center;
+    text-indent: -9px;
+    color: #faeca3;
+    font-size: 30px;
+    background: url("../img/btn-bg-1212.png") no-repeat;
+}
+
+.lottery-win-content {
+    display: block;
+    width: 909px;
+    height: 423px;
+    padding-top: 80px;
+    margin: auto;
+    background: url("../img/list-bg-1212.png") no-repeat;
+}
+
+label.win-title {
+    display: block;
+    width: 750px;
+    margin: 35px auto 0;
+    padding: 0;
+    text-align: center;
+    color: #e60c3b;
+    font-size: 44px;
+}
+
+.win-list-bar {
+    display: block;
+    width: 750px;
+    margin: auto;
+    height: 280px;
+    overflow: hidden;
+}
+
+.win-list {
+    display: block;
+    width: 750px;
+    margin: auto;
+}
+
+.win-list li {
+    width: 460px;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.win-list li span {
+    color: #902e1a;
+    float: left;
+    width: 50%;
+}
+
+.win-list li label {
+    float: right;
+    text-align: right;
+    color: #eb3d63;
+    width: 49%;
+}
+
+.lottery-rule {
+    display: block;
+    width: 1200px;
+    height: 580px;
+    padding-top: 43px;
+    background: url("../img/rule-bg-1212.jpg") no-repeat;
+}
+
+.lottery-rule h2{
+    margin-bottom: 20px;
+}
+
+.rule-cont {
+    display: block;
+    width: 900px;
+    margin: auto;
+    font-size: 20px;
+    color: #fbf2c8;
+    line-height: 34px;
+}
+
+.disk-bar {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.disk-bar canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.disk-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    margin-left: -239px;
+    margin-top: -250px;
+    display: block;
+    width: 477px;
+    height: 397px;
+    padding-top: 80px;
+    background: url("../img/tips-bg.png") no-repeat;
+}
+
+.disk-title {
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: 380px;
+    margin: auto;
+    height: 84px;
+    text-align: center;
+    line-height: 58px;
+    color: #FFFFFF;
+    font-size: 30px;
+    background: url("../img/title-bg.png") no-repeat;
+}
+
+.dist-cont {
+    position: absolute;
+    top: 117px;
+    left: 50%;
+    z-index: 10;
+    display: block;
+    padding: 50px 10px 15px;
+    width: 232px;
+    margin-left: -123px;
+    background: #fcf5dd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.dist-cont .text {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+}
+
+.dist-cont .img {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.dist-cont .img p {
+    color: #a44407;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: bold;
+    width: 200px;
+    margin: auto;
+}
+
+.dist-cont .disk-handle {
+    display: block;
+    width: 230px;
+    margin: auto;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: #fb2338;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.disk-content3 {
+    display: block;
+    width: 380px;
+    margin: auto;
+    height: 453px;
+    background: url("../img/tips-win-bg.png") no-repeat;
+}
+
+.disk-content3 .disk-title {
+    display: block;
+    width: 380px;
+    height: 140px;
+    background: url("../img/tips-win-bg2.png") no-repeat;
+}
+
+.disk-content3 .dist-cont {
+    top: 160px;
+}
+
+.disk-content3 .img {
+    margin: 10px auto;
+}
+
+.disk-content3 .text {
+    color: #a41602;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.disk-content3 .text span {
+    color: #f32002;
+}
+
+.img-bg {
+    position: relative;
+    display: block;
+    width: 139px;
+    height: 119px;
+    margin: auto;
+    background: url("../img/tips-packet-bg.png") no-repeat;
+}
+
+.img-bg span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #f6ff00;
+}
+
+.img-bg label {
+    display: block;
+    width: 92px;
+    margin: auto;
+    position: relative;
+    top: 15px;
+    left: 23px;
+    padding-left: 52px;
+    text-align: left;
+    font-size: 13px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 16px;
+
+}
+
+.img-bg label i {
+    display: block;
+    width: 42px;
+    text-align: right;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 34px;
+}
+
+.disk-content3 .disk-handle {
+    width: 200px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}

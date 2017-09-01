@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>pc大转盘</title>
+    <link rel="stylesheet" href="css/public.pc.min.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body class="main-body">
+<div class="main-container">
+    <div class="wrap1200">
+        <div class="header">
+            <div class="active-time">
+                <label>活动时间</label>
+                <span>2016.11.8 -- 2016.11.11</span>
+            </div>
+            <div class="active-logo">
+                <label><img src="img/icon-logo.png"></label>
+            </div>
+            <div class="active-turntable">
+                <div class="turntable-main">
+                    <label class="turntable-img"><img src="img/lottery-turntable.png"></label>
+                    <a class="turntable-btn" href="javascript:;"></a>
+                </div>
+                <div class="turntable-bto"><img src="img/lottery-pedestal.png"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="lottery-number clearfix">
+                <label class="gift-img"><img src="img/icon-gift.png"></label>
+
+                <div class="lottery-num-text">
+                    <p>你今天还有<span class="residue-num">1</span>次抽奖机会</p>
+
+                    <p style="font-size: 20px;">今天还剩满减券：<span class="residue-num2">10000</span> 张&nbsp;&nbsp;现金券：
+                        <span class="residue-num2">10000</span> 张</p>
+                </div>
+            </div>
+            <div class="lottery-win-list">
+                <h2><span>中奖公布</span></h2>
+
+                <div class="lottery-win-content">
+                    <label class="win-title">中奖名单</label>
+
+                    <div class="win-list-bar">
+                        <ul class="win-list">
+                            <li><span>1wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>2wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>3wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>4wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>5wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>6wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>7wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>8wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>9wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>10wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>11wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>12wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>13wjl****2wyl</span><label>5元自营美妆券</label></li>
+                            <li><span>14wjl****2wyl</span><label>5元自营美妆券</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="lottery-win-list">
+                <h2><span>活动规则</span></h2>
+
+                <div class="rule-cont">
+                    1、活动时间为：2016年10月10日00:00:00-2016年10月13日23:59:59。<br>
+                    2、参与抽奖会员账号必须绑定手机号码。<br>
+                    3、活动奖品为：奖品依次为格朗套装、雅顿的套装礼盒、新安怡吸乳器、消防积木，5元无门槛券（抢购商品不可用券），大白锁匙扣、小蜜蜂多轮翻斗车。<br>
+                    4、中奖用户通过抽奖系统提交收货信息，奖品在活动结束后（10月13日）7个工作日内发货,若中奖用户在中奖后2个工作日内没有提交或提交的收货信息有误，视为自动放弃中奖资格。<br>
+                    5、抽奖图片仅供参考，奖品以实物为准，奖品不开具发票，不支持退换货。<br>
+                    6、获奖资格不可转让，奖品不可兑现，同一IP地址只能中奖一次 ，同一IP地址、手机号、收件人、收件地址多次中奖将被视为恶意刷奖行为，视为中奖无效。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script src="js/js.js"></script>
+<script type="text/template" id="diskBox">
+    <div class="disk-bar">
+        <div class="disk-container">
+            <div class="*%class%*">
+                <h2 class="disk-title">*%title%*</h2>
+
+                <div class="dist-cont">
+                    <div class="text">*%text%*</div>
+                    <div class="img">*%img%*</div>
+                    <a class="disk-handle" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    $(function () {
+        var _clearTimer_;
+
+        $(".turntable-img").lottery({
+            lotteryImg: {
+                src: "img/lottery-turntable1.png",
+                w: 601,
+                h: 601
+            },
+            diskEle: "#diskBox",
+            occasion: 2,
+            allNum: 10,
+//            productText: [
+//                {price: 2, text: "2元现金券"},
+//                {price: 0, text: "再接再厉"},
+//                {price: 8, text: "满100减8"},
+//                {price: 5, text: "5元现金券"},
+//                {price: 0, text: "再接再厉"},
+//                {price: 5, text: "满100减5"},
+//                {price: 0, text: "再接再厉"},
+//                {price: 20, text: "满200减20"}
+//            ],
+            productText: [
+                {price: 3, text: "3元现金券"},
+                {price: 0, text: "再接再厉"},
+                {price: 10, text: "满200减10"},
+                {price: 10, text: "10元现金券"},
+                {price: 0, text: "再接再厉"},
+                {price: 10, text: "满100减10"},
+                {price: 0, text: "再接再厉"},
+                {price: 15, text: "满200减15"}
+            ],
+            initFun: function (opt) {
+                //转盘图片
+                $(".turntable-img").css({
+                    "width": opt.lotteryImg.w + "px",
+                    "height": opt.lotteryImg.h + "px"
+                }).find("img").attr("src", opt.location + opt.lotteryImg.src);
+
+                marqueeText(".win-list", "top", 2000);
+                $(".active-time").find("span").text(opt.timer);
+                $(".residue-num").text(opt.occasion);
+            },
+            finishFun: function (type) {
+                //判断当前中奖类型，用于剪掉剩余奖券
+                console.log(type);  //"none"-再接再厉，"满减券"-满减券，"现金券"-现金券
+            }
+        });
+        function marqueeText(tag, slideDir, time) {
+            clearInterval(_clearTimer_);
+            _clearTimer_ = setInterval(function () {
+                var _top = parseInt($(tag).css("marginTop"));
+                var _moveHeight = $(tag).find("li:eq(0)").height();
+                switch (slideDir) {
+                    case "top":
+                        $(tag).animate({
+                            "marginTop": _top - _moveHeight + "px"
+                        }, 300, function () {
+                            $(tag).css({"marginTop": 0}).children("li").last().after($(tag).children("li").first());
+                        });
+                        break;
+                }
+            }, time);
+        }
+    });
+</script>
+</body>
+</html>

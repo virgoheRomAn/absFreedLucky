@@ -1,0 +1,262 @@
+.main-body {
+    background: #3c0c7c;
+    width: 100%;
+    position: relative;
+}
+
+.main-overflow {
+    overflow: hidden;
+}
+
+.lottery-bar {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 86px;
+    padding-bottom: 20px;
+}
+
+.lottery-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: block;
+    background: #f1e8f3;
+    height: 46px;
+    line-height: 46px;
+    width: 100%;
+    padding: 0 60px;
+    font-size: 18px;
+    color: #2f2f2f;
+}
+
+.lottery-title a.lottery-back,
+.lottery-title a.lottery-share {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 46px;
+    width: 60px;
+    text-indent: -9999px;
+}
+
+.lottery-title a.lottery-back:after,
+.lottery-title a.lottery-share:after {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    content: "";
+    width: 26px;
+    height: 20px;
+    margin-top: -10px;
+    background: url("../img/lottery-back.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.lottery-title a.lottery-share {
+    /*display: none;*/
+    left: auto;
+    right: 0;
+}
+
+.lottery-title a.lottery-share:after {
+    width: 22px;
+    height: 21px;
+    margin-top: -10px;
+    left: auto;
+    right: 15px;
+    background: url("../img/lottery-share.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.lottery-title span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.lottery-container {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.lottery-container img {
+    display: block;
+    width: 100%;
+}
+
+.lottery-menu {
+    position: fixed;
+    top: 46px;
+    left: 0;
+    z-index: 1001;
+    display: block;
+    width: 100%;
+    background: #2b034c;
+    padding-right: 30px;
+}
+
+a.menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 40px;
+    text-indent: -9999px;
+}
+
+a.menu-btn:after {
+    display: block;
+    width: 18px;
+    height: 10px;
+    content: "";
+    background: url("../img/menu-icon.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -5px;
+    margin-left: -9px;
+
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+
+a.menu-btn.active:after {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+}
+
+.lottery-menu ul {
+    display: block;
+    height: 40px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.lottery-menu li {
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu-container ul {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+}
+
+.menu-container ul li {
+    float: left;
+    padding-right: 15px;
+}
+
+.lottery-menu li.active a {
+    color: #FFEB3B;
+    border-radius: 15px;
+}
+
+.lottery-menu li.active a:before {
+    display: block;
+    width: 10px;
+    height: 13px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    margin-top: -7px;
+    background: url("../img/area-icon.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.lottery-menu li a {
+    position: relative;
+    text-align: left;
+    display: block;
+    height: 24px;
+    line-height: 22px;
+    margin-top: 8px;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.lottery-header {
+    position: relative;
+}
+
+.lottery-header .lottery-time {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.lottery-time i {
+    color: #fff998;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.lottery-time span {
+    margin-right: 2px;
+    margin-left: 2px;
+    color: #fff998;
+}
+
+.floor-cont {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.floor-product {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.floor-product a {
+    display: block;
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+
+.floor-product.product-row2 {
+    display: block;
+    width: 60%;
+    left: 50%;
+    margin-left: -30%;
+}
+
+.floor-product.product-row2 a {
+    display: block;
+    width: 50%;
+    height: 100%;
+    float: left;
+}

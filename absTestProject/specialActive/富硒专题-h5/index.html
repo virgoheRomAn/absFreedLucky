@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>富硒专题</title>
+    <link rel="stylesheet" href="css/public.phone.min.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body class="main-body">
+<div class="header">
+    <h2 class="lottery-title">
+        <a class="lottery-back" href="javascript:;">返回</a>
+        <span>硒都味道</span>
+        <a class="lottery-share" href="javascript:;">分享</a>
+    </h2>
+
+    <div class="banner">
+        <img src="img/banner.jpg">
+    </div>
+    <div class="lottery-menu">
+        <div class="menu-container">
+            <ul>
+                <li class="active"><a href="#floor1">什么是硒</a></li>
+                <li><a href="#floor2">硒都恩施</a></li>
+                <li><a href="#floor3">富硒美食</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-floor hot-product" id="floor1" data-floor="1F">
+        <div class="hot-product-list">
+            <img src="img/floor1-img1.jpg">
+            <img src="img/floor1-img2.jpg">
+            <img src="img/floor1-img3.jpg">
+            <img src="img/floor1-img4.jpg">
+        </div>
+    </div>
+    <div class="recommend-product">
+        <div class="container-floor recommend-list list-row reset-space" id="floor2" data-floor="2F">
+            <h2 class="recommend-title"><img src="img/title2.jpg"></h2>
+
+            <div class="product-list">
+                <ul>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list1.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list2.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list3.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list4.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list5.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list6.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list7.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-floor recommend-list list-row reset-space" id="floor3" data-floor="3F">
+            <div class="product-list">
+                <ul>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list8.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list9.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="product-img"><img src="img/pro-list10.jpg"></label>
+                        <div class="product-cont clearfix">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="pos-fix go-top" href="javascript:;" id="goTop"><img src="img/icon-goTop.png"></a>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+    $(function () {
+
+        //菜单操作
+        var _is_click = false;
+
+        $("#goTop").click(function () {
+            scrollToEle(0);
+        });
+
+        $(".menu-container li").click(function () {
+            if ($(this).hasClass("active")) return false;
+            $(this).addClass("active").siblings().removeClass("active");
+            var id = $(this).find("a").attr("href");
+            var top = $(id).offset().top;
+            scrollToEle(top - 70);
+        });
+
+        function scrollToEle(top) {
+            _is_click = true;
+            $("html,body").animate({"scrollTop": top + "px"}, 500, function () {
+                _is_click = false;
+            });
+        }
+
+        var $ele = $(".container-floor");
+        var doc_top = $(".lottery-menu").offset().top - 36;
+        $(window).scroll(function () {
+            var _win_height = $(this).height();
+            var top = $(this).scrollTop();
+            if (top > doc_top) {
+                $("#goTop").fadeIn();
+                $(".lottery-menu").addClass("active");
+            } else {
+                $("#goTop").fadeOut();
+                $(".lottery-menu").removeClass("active");
+            }
+
+            if (!_is_click) {
+                var next_height = $(document).height();
+                var index = 0;
+                $ele.each(function (i) {
+                    if ($ele.eq(i + 1).height() == null) {
+                        index = $ele.length - 1;
+                        next_height = $(document).height();
+                    } else {
+                        next_height = $ele.eq(i + 1).offset().top;
+                        index = i;
+                    }
+                    if ((top + _win_height * 9 / 10) > $(this).offset().top && (top + _win_height * 1 / 10) < next_height) {
+                        $(".menu-container li").eq(index).addClass("active").siblings().removeClass("active");
+                    }
+                });
+            }
+        });
+    })
+</script>
+</body>
+</html>

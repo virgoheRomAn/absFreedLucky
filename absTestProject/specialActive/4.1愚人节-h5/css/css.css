@@ -1,0 +1,884 @@
+html, body {
+    font-size: 14px;
+    font-family: "微软雅黑", arial, sans-serif;
+}
+
+/***********************************************/
+/*专题样式控制*/
+/***********************************************/
+.main-body {
+    background: #6800ae;
+    width: 100%;
+    position: relative;
+}
+
+.main-body img {
+    display: block;
+    width: 100%;
+}
+
+.header {
+    padding-top: 46px;
+}
+
+/***********************************************/
+/*专题title*/
+/***********************************************/
+.lottery-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: block;
+    background: #6800ae;
+    height: 46px;
+    line-height: 46px;
+    width: 100%;
+    padding: 0 60px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.lottery-title a.lottery-back,
+.lottery-title a.lottery-share {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 46px;
+    width: 60px;
+    text-indent: -9999px;
+}
+
+.lottery-title a.lottery-back:after,
+.lottery-title a.lottery-share:after {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    content: "";
+    width: 23px;
+    height: 23px;
+    margin-top: -12px;
+    background: url("../img/icon-back.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.lottery-title a.lottery-share {
+    left: auto;
+    right: 0;
+}
+
+.lottery-title a.lottery-share:after {
+    width: 21px;
+    height: 20px;
+    margin-top: -10px;
+    left: auto;
+    right: 15px;
+    background: url("../img/icon-share.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.lottery-title span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.header, .container, .banner,
+.hot-product, .hot-product-title, .hot-product-list,
+.recommend-product, .recommend-title, .recommend-list,
+.favorable-box, .favorable-cont {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.hot-product-list {
+    padding: 0 3px;
+}
+
+.hot-box {
+    background: #560087;
+    padding: 10px 6px;
+}
+
+.recommend-title {
+    width: 89%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.recommend-product {
+    margin-bottom: 50px;
+}
+
+.favorable-cont {
+    background: #630d85;
+    padding: 15px 0;
+}
+
+.favorable-left {
+    width: 100%;
+}
+
+.favorable-left > ul {
+    /*margin-top: 7px;*/
+    /*padding-left: 8px;*/
+}
+
+.favorable-left > ul > li {
+    margin-top: 0;
+    padding: 0 2px 0 3px;
+}
+
+.favorable-right {
+    float: right;
+    width: 40%;
+}
+
+.favorable-right img {
+    position: relative;
+    top: 2px;
+    right: 2px;
+}
+
+/***********************************************/
+/*结束*/
+/***********************************************/
+
+/***********************************************/
+/*专题菜单*/
+/***********************************************/
+.lottery-menu {
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 100%;
+}
+
+.lottery-menu.active {
+    height: 36px;
+    z-index: 12;
+}
+
+.lottery-menu.active .menu-container {
+    position: fixed;
+    top: 46px;
+    left: 0;
+    z-index: 1001;
+}
+
+.menu-container {
+    display: block;
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+}
+
+.menu-container ul {
+    display: block;
+    overflow: hidden;
+}
+
+.menu-container li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.menu-container li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    color: #6800ae;
+    font-size: 14px;
+    background: #fbdd26;
+    text-align: center;
+    /*border-right: 1px dashed #b80c26;*/
+}
+
+.menu-container li.active a {
+    color: #FFFFFF;
+    background: #e41be2;
+}
+
+.menu-container li:last-child a {
+    border-right: 0 none;
+}
+
+/***********************************************/
+/*结束*/
+/***********************************************/
+
+/***********************************************/
+/*产品列表*/
+/***********************************************/
+.hot-list {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hot-list:last-child {
+    margin-bottom: 0;
+}
+
+.theme1 {
+    background: #fbdd26;
+}
+
+.theme2 {
+    background: #3db7ea;
+}
+
+.theme3 {
+    background: #bfe200;
+}
+
+.theme4 {
+    background: #0bbaa9;
+}
+
+.theme5 {
+    background: #fa82c3;
+}
+
+.theme6 {
+    background: #1dd882;
+}
+
+.theme1 .hot-pro-information:before {
+    border-color: transparent #fbdd26 transparent transparent
+}
+
+.theme2 .hot-pro-information:before {
+    border-color: transparent #3db7ea transparent transparent
+}
+
+.theme3 .hot-pro-information:before {
+    border-color: transparent #bfe200 transparent transparent
+}
+
+.theme4 .hot-pro-information:before {
+    border-color: transparent #0bbaa9 transparent transparent
+}
+
+.theme5 .hot-pro-information:before {
+    border-color: transparent #fa82c3 transparent transparent
+}
+
+.theme6 .hot-pro-information:before {
+    border-color: transparent #1dd882 transparent transparent
+}
+
+.theme1 .hot-pro-name {
+    color: #be8917;
+}
+
+.theme2 .hot-pro-name {
+    color: #ffef31;
+}
+
+.theme3 .hot-pro-name {
+    color: #bc810d;
+}
+
+.theme4 .hot-pro-name {
+    color: #ffef31;
+}
+
+.theme5 .hot-pro-name {
+    color: #a77107;
+}
+
+.theme6 .hot-pro-name {
+    color: #f5e529;
+}
+
+.theme1 .hot-pro-intro {
+    color: #666666;
+}
+
+.theme2 .hot-pro-intro {
+    color: #5c5c5c;
+}
+
+.theme3 .hot-pro-intro {
+    color: #666666;
+}
+
+.theme4 .hot-pro-intro {
+    color: #5c5c5c;
+}
+
+.theme5 .hot-pro-intro {
+    color: #545454;
+}
+
+.theme6 .hot-pro-intro {
+    color: #5c5c5c;
+}
+
+.theme1 .hot-price-old {
+    color: #999999;
+}
+
+.theme2 .hot-price-old {
+    color: #818080;
+}
+
+.theme3 .hot-price-old {
+    color: #999999;
+}
+
+.theme4 .hot-price-old {
+    color: #818080;
+}
+
+.theme5 .hot-price-old {
+    color: #666666;
+}
+
+.theme6 .hot-price-old {
+    color: #818080;
+}
+
+.theme1 .hot-price-new {
+    color: #ff3136;
+}
+
+.theme2 .hot-price-new {
+    color: #fffdfd;
+}
+
+.theme3 .hot-price-new {
+    color: #e40011;
+}
+
+.theme4 .hot-price-new {
+    color: #fffdfd;
+}
+
+.theme5 .hot-price-new {
+    color: #e90516;
+}
+
+.theme6 .hot-price-new {
+    color: #fffdfd;
+}
+
+.hot-list a {
+    display: block;
+    width: 100%;
+    color: #000000;
+}
+
+.hot-pro-img {
+    background: #FFFFFF;
+    float: left;
+    width: 54%;
+}
+
+.hot-pro-information {
+    position: relative;
+    float: left;
+    width: 46%;
+    padding: 13px 6px 0 10px;
+}
+
+.hot-pro-information:before {
+    position: absolute;
+    top: 32%;
+    left: -16px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid;
+}
+
+.hot-pro-name {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.hot-pro-tips {
+    font-size: 10px;
+    /*height: 32px;*/
+    line-height: 16px;
+    color: #ee2225;
+    margin: 5px 0;
+}
+
+.hot-pro-intro {
+    color: #545454;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.hot-pro-price {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 46%;
+    height: 40px;
+    padding: 0 19% 0 10px;
+}
+
+.hot-price-old {
+    color: #999999;
+    text-decoration: line-through;
+    font-size: 10px;
+    line-height: 16px;
+    display: block;
+}
+
+.hot-price-new {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #ff3136;
+    font-size: 7px;
+    font-weight: bold;
+    margin-top: -1px;
+}
+
+.hot-price-new i {
+    font-size: 18px;
+}
+
+.hot-list a.carBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 17.38%;
+}
+
+.product-list {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.product-list ul {
+    display: block;
+    width: 100%;
+    padding: 0 6px;
+}
+
+.product-list li {
+    position: relative;
+    display: block;
+    width: 50%;
+    float: left;
+    padding: 0 3px;
+    margin-bottom: 6px;
+}
+
+.pro-img {
+    background: #FFFFFF;
+    padding: 8px;
+}
+
+.pro-intro {
+    display: block;
+    width: 100%;
+    padding: 3px 8px 5px 8px;
+    background: #eeeeee;
+}
+
+.pro-name {
+    font-size: 13px;
+    color: #333333;
+    line-height: 18px;
+    height: 36px;
+}
+
+.pro-price {
+    display: block;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.pro-old-price {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.pro-new-price {
+    color: #d50747;
+    font-size: 18px;
+    height: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: -2px;
+}
+
+.pro-new-price i {
+    font-size: 10px;
+}
+
+.buy-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+    width: 38px;
+}
+
+.buy-btn span {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 3px 0;
+    text-indent: -9999px;
+    background: #d50747 url("../img/icon-car.png") no-repeat center;
+    background-size: 13px 15px;
+    border-radius: 3px;
+}
+
+.carBtn i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-indent: -99999px;
+}
+
+.shop-car-bax {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    padding-right: 80px;
+    background: #3f076f;
+    /*border-top: 1px solid #e1dede;*/
+    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.shop-car-bax.active {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.shop-car-bax label {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.shop-car-bax i {
+    color: #ff1313;
+    font-size: 12px;
+}
+
+.shop-car-bax i#carNum {
+    color: #FFFFFF;
+}
+
+.shop-car-bax span {
+    color: #ff1313;
+    font-size: 16px;
+}
+
+.shop-car-bax a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background: #d50b37;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    width: 80px;
+}
+
+/*.product-cont a:nth-child(1){
+    background: #3f7f7f;
+}
+.product-cont a:nth-child(2){
+    background: #1411ff;
+}
+.product-cont a:nth-child(3){
+    background: #3eff2f;
+}*/
+
+.go-top {
+    display: none;
+    width: 33px;
+    height: 33px;
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: 50px;
+}
+
+.lottery-tag-img {
+    position: fixed;
+    right: 10px;
+    bottom: 150px;
+    z-index: 20;
+    display: block;
+    width: 47px;
+    height: 57px;
+}
+
+.lottery-tag-img span.lottery-btn-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.lottery-tag-img span.lottery-btn-img.active {
+    animation: rollIn 1s ease both;
+    -webkit-animation: rollIn 1s ease both;
+}
+
+.lottery-tag-img span.lottery-btn-text {
+    position: absolute;
+    top: 5px;
+    right: -8px;
+    z-index: 99;
+    display: block;
+    width: 32px;
+    height: 12px;
+}
+
+.lottery-tag-img span.lottery-btn-text.active {
+    animation: tada 1s both;
+    -webkit-animation: tada 1s both;
+}
+
+/********************************************/
+/***********          弹窗动画          ***********/
+/********************************************/
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+.animate-infinite-linear {
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-direction: normal;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-direction: normal;
+}
+
+/*旋转*/
+@-webkit-keyframes rotateDeg {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateDeg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotateDeg {
+    animation-name: rotateDeg;
+    -webkit-animation-name: rotateDeg;
+}
+
+/*j弹窗动画*/
+@-webkit-keyframes j-alert-ani {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes j-alert-ani {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.j-alert-ani {
+    -webkit-animation-name: j-alert-ani;
+    animation-name: j-alert-ani;
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px)
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(5);
+        -ms-transform: translateX(5px);
+        transform: translateX(5px)
+    }
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake
+}
+
+/*动画列表*/
+@-webkit-keyframes tada {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    10%, 20% {
+        opacity: 1;
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+        opacity: 1;
+        -webkit-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg)
+    }
+}
+
+@keyframes tada {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+    10%, 20% {
+        opacity: 1;
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        -ms-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+        opacity: 1;
+        -webkit-transform: scale(1.1) rotate(3deg);
+        -ms-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        -ms-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(0deg);
+        -ms-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg)
+    }
+}
+
+@-webkit-keyframes rollIn {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rollIn {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
